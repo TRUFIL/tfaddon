@@ -1,0 +1,11 @@
+[
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Sampling Request", 
+  "modified": "2018-04-12 17:52:12.942585", 
+  "name": "Sampling Request-Client", 
+  "script": "frappe.ui.form.on(\"Sampling Request\", \"refresh\", function(frm) {\n    cur_frm.set_value(\"created_by\", frm.doc.owner);\n});", 
+  "script_type": "Client"
+ }
+]

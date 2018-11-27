@@ -1,0 +1,6 @@
+/* frappe.templates.style.standard.css */
+.print-format td, .print-format th {
+	vertical-align: top !important;
+	padding: 2px !important;
+}
+

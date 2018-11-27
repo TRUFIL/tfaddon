@@ -1,0 +1,276 @@
+{% set job = frappe.get_doc("Job Card", doc.sample_id) %}
+{% set is_nabl = False %}
+{% set nabl_cert_no = "T-3853" %}
+
+<div class="page-break" style="display: flex; flex-direction: column;">
+  <div id="header-html" class="hidden-pdf">
+    <div class="letter-head">
+      <div style="font-size: xx-small;" class="row section-break">
+        <div class="col-xs-3">
+          <img src="/files/Trufil Logo.PNG" alt="TRU-FIL Logo" style="width: auto; height: 40px;"><br>     
+          <small>CIN: U74120MH2011PLC221633</small>    </div>
+        <div class="col-xs-2 text-center">
+          {% if (is_nabl) %}
+          <img src="/files/nabl_logo.png" alt="NABL Logo" style="width: auto; height: 75px;vertical-align: bottom" data-filename="nabl_logo.png"><br>
+          <small>{{ nabl_cert_no }}</small>
+          {% endif %}
+        </div>
+        <div class="col-xs-4 text-center">
+          <h3>Oil Test Report</h3>
+        </div>
+        <div class="col-xs-3 text-right"><p style="font-size: x-small;"><span style="font-size: small;">
+          TRU-FIL Limited</span><br>PAP-A-362, Electronics Zone<br> DNA Road, Mahape<br>Navi Mumbai, MH, India<br> Tel: 022-2763 0030<br>Email: support@trufil.com</p>
+        </div>
+      </div>
+      
+      <div class="row section-break" style="font-size:x-small;">
+        <div class="col-xs-12">
+          <table class="table-bordered" style="width:100%; font-size:x-small;">
+            <tbody>
+              <tr>
+                <td style="width:20%">Report No</td>
+                <td style="width:30%"><b>{{ doc.report_no }}</b></td>
+                <td style="width:20%">Format No</td>
+                <td style="width:30%">{{ _("2") }}</td></tr>
+              <tr>
+                <td>Report Date</td>
+                <td><b>{{ doc.get_formatted("report_date", translated=True) }}</b></td>
+                <td>Revision</td>
+                <td>{{ _("Rev 0 dated 26/02/2018") }}</td></tr>
+              <tr>
+                <td>Testing Date</td>
+                <td>{{ doc.get_formatted("testing_date", translated=True) }}</td>
+                <td>Customer's Reference</td>
+                <td>{{ job.po_no }} dated {{ job.get_formatted("po_date", translated=True) }}</td></tr>
+              <tr>
+                <td>Material Tested</td>
+                <td>{{ job.material }}</td>
+                <td>Our Reference</td>
+                <td>{{ job.sales_order }} dated {{ job.get_formatted("transaction_date", translated=True) }}</td></tr>
+              <tr>
+                <td>Ambient Condition</td>
+                <td>Temp: {{ doc.lab_temp }} <sup>o</sup>C / Humidity: {{ doc.lab_humidity }}%</td>
+                <td>Our Sample ID</td>
+                <td>{{ doc.sample_id }}</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Sample and Equipment Details -->
+
+<div class="row section-break text-center" style="font-size:large;">
+  <div class="col-xs-12">
+    {% if (doc.docstatus == 0) %}
+      {{ _("DRAFT") }}
+    {% endif %} 
+  </div>
+</div>
+
+<!-- Sample and Equipment Details -->
+{% set issued_to = job.alt_issued_to if job.is_alt_issued_to else job.issued_to %}
+{% set issued_to_address = job.alt_issued_to_address if job.is_alt_issued_to else job.issued_to_address %}
+{% set eq_load = job.eq_load if frappe.utils.cint(job.eq_load) > 0 else "--" %}
+{% set eq_ott = job.eq_ott if frappe.utils.cint(job.eq_ott) > 0 else "--" %}
+{% set eq_wtt = job.eq_wtt if frappe.utils.cint(job.eq_wtt) > 0 else "--" %}
+
+<div class="row section-break" style="font-size:x-small;">
+  <div class="col-xs-12">
+    <caption></caption>
+    <table class="table-bordered" style="width:100%;">
+      <tbody>
+        <tr>
+          <th colspan="2"><b><u>Report Issued To: </u></b></th>
+          <th colspan="2"><b><u>Equipment Details: </u></b></th></tr>
+        <tr>
+          <td colspan="2" rowspan="3"><b>{{ issued_to }}</b><br>{{ issued_to_address }}</td>
+          <td>Owner</td>
+          <td>{{ job.eq_owner_name }}</td></tr>
+        <tr>
+          <td>Installation Location</td>
+          <td>{{ job.loc_area }}</td></tr>
+        <tr>
+          <td>Equipment Designation</td>
+          <td>{{ job.loc_location }}/{{ job.loc_cd }}</td></tr>
+        <tr>
+          <td colspan="2"><b><u>Sample Details</u></b></td>
+          <td>Owner's Location ID</td>
+          <td>{{ job.loc_ccd or _("--") }}</td></tr>
+        <tr>
+          <td style="width:20%">Sample Collected By</td>
+          <td style="width:30%">{{ job.collected_by }}</td>
+          <td style="width:20%">Owner's Equipment ID</td>
+          <td style="width:30%">{{ job.owner_eq_id or _("--") }}</td></tr>
+        <tr>
+          <td>Customer's Container</td>
+          <td>{{ job.customer_container or _("--") }}</td>
+          <td>Equipment Type</td>
+          <td>{{ job.eq_type }}</td></tr>
+        <tr>
+          <td>TRUFIL's Container</td>
+          <td>{{ job.trufil_container }}</td>
+          <td>Manufacturer</td>
+          <td>{{ job.manufacturer_full_name }}</td></tr>
+        <tr>
+          <td>Sampling Date</td>
+          <td>{{ job.get_formatted("collection_date", translated=True) }}</td>
+          <td>Manufacturer's Sl. No.</td>
+          <td>{{ job.eq_sl_no }}</td></tr>
+        <tr>
+          <td>Sample receipt Date</td>
+          <td>{{ job.get_formatted("receipt_date", translated=True) }}</td>
+          <td>Manufacturing Year</td>
+          <td>{{ job.eq_yom }}</td></tr>
+        <tr>
+          <td>Condition on receipt</td>
+          <td>{{ job.receipt_condition }}</td>
+          <td>Cooling</td>
+          <td>{{ job.eq_cooling }}</td></tr>
+        <tr>
+          <td>Reason for Sampling</td>
+          <td>{{ job.smp_condition }}</td>
+          <td>Rating</td>
+          <td>{{ job.capacity }}</td></tr>
+        <tr>
+          <td>Weather condition</td>
+          <td>{{ job.weather_condition }}</td>
+          <td>Voltage Ratio</td>
+          <td>{{ job.voltage }}</td></tr>
+        <tr>
+          <td>Sampling Point</td>
+          <td>{{ job.smp_point }}</td>
+          <td>Current Ratio</td>
+          <td>{{ job.current }}</td></tr>
+        <tr>
+          <td>Sample Remarks</td>
+          <td>{{ _(job.sample_remarks) or _("--") }}</td>
+          <td>Phases</td>
+          <td>{{ job.eq_phases }}</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- OST Report -->
+{% if (doc.is_ost) %}
+<div class="row section-break" style="font-size:x-small;">
+  <div class="col-xs-12">
+    <table class="table-bordered text-center" style="width:100%;">
+      <caption></caption>
+      <tbody>
+        <tr>
+          <th style="width:22%; height:30px">Oil Screening Tests</th>
+          <th style="width:15%;text-align:center; height:30px">Test Standard</th>
+          <th style="width:10%;text-align:center;">UOM</th>
+          <th style="width:17%;text-align:center;">Test Result</th>
+          <th style="width:19%;text-align:center;">Limits as per<br>{{ doc.ost_standard }}</th>
+          <th colspan="2" style="text-align:center;">Opinions and Interpretations</th></tr>
+        <tr><td style="text-align:left;">Appearence</td>
+          <td>{{ _("IS 335") }}</td>
+          <td colspan="3"></td>
+          <td colspan="2" rowspan="9" style="vertical-align: middle;"><b>{{ doc.ost_interpretation }}</b></td></tr>
+        <tr><td style="text-align:left;text-indent: 10px;">Colour</td>
+          <td>{{ _("6.1(c) of IS 1866") }}</td>
+          <td>{{ _("--") }}</td>
+          <td><b>{{ doc.colour }}</b></td>
+          <td rowspan="3">{{ _(doc.appearance_limit) }}</td></tr>
+        <tr><td style="text-align:left;text-indent: 10px;">Clarity</td>
+          <td>{{ _("") }}</td>
+          <td>--</td>
+          <td><b>{{ doc.clarity }}</b></td></tr>
+        <tr><td style="text-align:left;text-indent: 10px;">Odour</td>
+          <td>{{ _("") }}</td>
+          <td>--</td>
+          <td><b>{{ doc.odour }}</b></td></tr>
+        <tr><td style="text-align:left;">Density at RT</td>
+          <td>{{ _("IS 1448 [P:16]") }}</td>
+          <td>g/cm<sup>3</sup></td>
+          <td><b>{{ doc.ost_density }}</b></td>
+          <td>{{ _(doc.density_limit) }} Max</td></tr>
+        <tr><td style="text-align:left;">Sp. Resistance at 27 <sup>o</sup>C</td>
+          <td rowspan="2">{{ _("IS 6103") }}</td>
+          <td rowspan="2">{{ _("ohm-cm") }}</td>
+          <td><b>{% if doc.ost_spr_1 == "NT" %}{{ _("NT") }}{% else %}{{ doc.ost_spr_1 }}x10<sup>12</sup>{% endif %}</b></td>
+          <td>{{ _(doc.resistivity_limit) }}x10<sup>12</sup> Min</td></tr>
+        <tr><td style="text-align:left;">Sp. Resistance at 90 <sup>o</sup>C</td>
+          <td><b>{% if doc.ost_spr_2 == "NT" %}{{ _("NT") }}{% else %}{{ doc.ost_spr_2 }}x10<sup>12</sup>{% endif %}</b></td>
+          <td>{{ _(doc.resistivity_limit_2) }}x10<sup>12</sup> Min</td></tr>
+        <tr><td style="text-align:left;">Electric Strength (BDV)</td>
+          <td>{{ _("IS 6792") }}</td>
+          <td>kV</td>
+          <td><b>{{ doc.ost_bdv }}</b></td>
+          <td>{{ _(doc.bdv_limit) }} Min</td></tr>
+        <tr><td style="text-align:left;">Interfacial Tension at 27 <sup>o</sup>C</td>
+          <td>{{ _("IS 6104") }}</td>
+          <td>N/m</td>
+          <td><b>{{ doc.ost_ift }}</b></td>
+          <td>{{ _(doc.ift_limit) }} Min</td></tr>
+        <tr><td style="text-align:left;">Water Content</td>
+          <td>{{ _("IS 13567") }}</td>
+          <td>mg/kg</td>
+          <td><b>{{ doc.ost_wc }}</b></td>
+          <td>{{ _(doc.wc_limit) }} Max</td>
+          <td style="width:9%;text-align:left;" rowspan="2"> Reco. Frequency </td>
+          <td style="width:8%;text-align:left;" rowspan="2"><b>{{ doc.ost_frequency }}</b></td></tr>
+        <tr><td style="text-align:left;">Neutralisation Value</td>
+          <td>{{ _("IS 1448 [P:2]") }}</td>
+          <td>mg KOH/g</td>
+          <td><b>{{ doc.ost_nv }}</b></td>
+          <td>{{ _(doc.nv_limit) }} Max</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+<!-- Over all Report Footer -->
+<div class="row section-break" style="font-size:x-small;">
+  <div class="col-xs-12">
+    <br>
+    <table class="table-bordered text-left" style="width:100%;">
+      <tbody>
+        <tr><th>Recommendations:</th></tr>
+        <tr><td><b>{{ doc.recommendation }}</b></td></tr>
+      </tbody>
+    </table>
+    <table class="text-left" style="width:100%;">
+      <caption><b>Remarks</b></caption>
+      <tbody>
+        <tr><td style="font-size:x-small;"><ol>
+          <li>Test Results pertain only to the sample submitted and tested. &nbsp;&nbsp;</li>
+          <li>The test report shall not be reproduced, except in full, without written approval of TRU-FIL Limited. &nbsp;&nbsp;</li>
+          <li>NT: Not Tested, ND: Not Detected, NS: Not Specified, NA: Not Applicable, --: Not Available</li></ol>
+      </tbody>
+    </table>
+    <table class="table" style="width:100%;">
+      <tbody>
+        <tr><td style="text-align:center;">-- End of Report --</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- Page Footer -->
+<div id="footer-html" class="visible-pdf" style="
+  display: block !important;
+  order: 1;
+  margin-top: 20px;
+  ">
+  
+  <div class="letter-head-footer">
+    <br>
+    <table style="width: 100%;" class="table-condensed">
+      <tbody>
+        <tr>
+          <td>Prepared By: {{ doc.created_by or _("__________________") }} </td>
+          <td class="text-right">Approved By: {{ doc.approved_by or _("__________________") }} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <p class="text-center small page-number visible-pdf">
+    Page <span class="page"></span> of <span class="topage"></span>
+  </p>
+</div>
+

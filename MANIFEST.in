@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include tfaddon *.css
+recursive-include tfaddon *.csv
+recursive-include tfaddon *.html
+recursive-include tfaddon *.ico
+recursive-include tfaddon *.js
+recursive-include tfaddon *.json
+recursive-include tfaddon *.md
+recursive-include tfaddon *.png
+recursive-include tfaddon *.py
+recursive-include tfaddon *.svg
+recursive-include tfaddon *.txt
+recursive-exclude * *.pyc

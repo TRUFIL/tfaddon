@@ -1,0 +1,84 @@
+<!-- Heading (custom html) -->
+<div class="row">
+  <div class="col-xs-12 text-center">
+    <span style="font-size:18pt"><u>TAX INVOICE</u></span><br>
+    <span style="font-size:7pt">(See rule7, for a tax invoice referred to in section 31)</span><br>
+    <span style="font-size:9pt"><u>{{ doc.invoice_copy }}</u></span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-4">
+    <div>Inv No: <b>{{ doc.name }}</b></div>
+  </div>
+  <div class="col-xs-4 text-center">
+  </div>
+  <div class="col-xs-4 text-right">
+    <div>Date: <b>{{ doc.get_formatted("posting_date", translated=True) }}</b></div>
+  </div>
+</div>
+
+<div><br></div>
+
+<!-- Section-2 Col-1 (Custom html) -->
+<div>
+  <div class="row">
+    <div class="col-xs-12">
+      <p>Bill To,</p>
+      <p style="margin-left: 25px"><b>{{ doc.customer_legal_name }}</b></p>
+      <p style="margin-left: 25px">{{ doc.address_display }}</p><br>
+      <p style="margin-left: 25px">Our Vendor Code: <b>{{ doc.vendor_code }}</b></p>
+    </div>
+  </div>
+</div>
+
+<!-- Section-2 Col-2 (Custom html) -->
+<div>
+  <div class="row">
+    <div class="col-xs-12">
+      <p>Delivery Address,</p>
+      <p style="margin-left: 25px"><b>{{ doc.customer_legal_name }}</b></p>
+      <p style="margin-left: 25px">{{ doc.shipping_address }}</p><br>
+      <p style="margin-left: 25px">GSTIN: <b>{{ doc.customer_gstin or NA }}</b></p>
+      {% set gs = frappe.get_doc("Address",  doc.shipping_address_name) %}
+      <p style="margin-left: 25px">GST State: <b>{{ gs.gst_state }}</b></p>
+    </div>
+  </div>
+</div>
+
+<!-- Section-3 (custom html) -->
+<div><br></div>
+<div class="row">
+  <div class="col-xs-2"><span>Your Ref:</span></div>
+  <div class="col-xs-10">
+    {% set cc = frappe.get_doc("Sales Order", doc.sales_order) %} <b>{{ cc.po_no or "" }} dated {{ cc.get_formatted("po_date", translated=True) or "" }}</b>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-2"><span>Invoice For:</span></div>
+  <div class="col-xs-10"><b>{{ doc.summary }}</b></div>
+</div>
+
+<!-- Section-4 (items Table) -->
+<!-- Section-5 Col-2 (Total) -->
+<!-- Section-6 (Sales Tax and Charge Table) -->
+<!-- Section-7 col-2 (Grand Total & In Words) -->
+<!-- Section-8 (Taxes and charge Calculation) -->
+<!-- Section-9 (Terms and Condition Details) -->
+<!-- Section-10 (Footer) -->
+
+<div class="row">
+  <div class="col-xs-8">
+    <p>Declaration:</p>
+    <ol>
+      <li>I/We declare that this invoice shows actual price of the goods and/or servicesdescribed and that all particulars are true and correct</li>
+      <li>Error and Ommission in this invoice shall be subject to juridiction of Navi Mumbai</li>
+    </ol> 
+  </div>
+  <div class="col-xs-4 text-right">
+    <br>
+    <p>For <b>TRU-FIL Limited</b></p>
+    <br><br>
+    <p>Authorised Signatory</p>
+  </div>
+</div>
+

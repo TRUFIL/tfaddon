@@ -1,0 +1,51 @@
+<!-- Heading (custom html) -->
+<div class="row important data-field">
+  <div class="col-xs-6"><b>Ref No: {{ doc.name }}</b></div>
+  <div class="col-xs-6 text-right"><b>Date: {{ doc.transaction_date }}</b></div>
+</div>
+<div><br></div>
+
+<!-- Section-2 (Custom html) -->
+<div class="row">
+  <div class="col-xs-6">
+    <p>To</p>
+    <p><b>{{ doc.customer_legal_name }}</b></p>
+    <p>{{ doc.address_display }}</p>
+  </div>
+  <div class="col-xs-6"></div>
+</div>
+<div><br></div>
+<div class="row">
+  <div class="col-xs-1"></div>
+  <div class="col-xs-2">
+    <p>Kind Attn:</p>
+    <p>Subject:</p>
+    <p>Reference</p>
+  </div>
+  <div class="col-xs-9">
+    <p>{{ doc.contact_display }}</p>
+    <p>{{ doc.subject }}</p>
+    <p>{{ doc.customer_ref }}</p>
+  </div>
+</div>
+<div><br></div>
+<div>
+  <p>Dear Sir / Madam,</p>
+  <p>We thank you for the above referred enquiry. As desired, we submit below our quotation for the scope of work mentioned as per your enquiry.</p>
+</div>
+
+<!-- Section-3 (items Table) -->
+<!-- Section-4 Col-2 (Total) -->
+<!-- Section-5 (Sales Tax and Charge Table) -->
+<!-- Section-6 col-2 (Grand Total & In Words) -->
+<!-- Section-7 (Taxes and charge Calculation) -->
+<!-- Section-8 (Terms and Condition Details) -->
+<!-- Section-9 (custom html) -->
+<div>
+  <p>Should you require any clarification, please feel free to call us or write to us. We will be more than happy to respond at the earliest. While assuring you of our best attention at all times, we look forward for working with you.</p>
+  <p>Thanking you,</p>
+  <p>Yours sincerely,</p>
+  <p>For <strong>TRU-FIL Limited</strong></p>
+  <br><br><br>
+  <p><b>{{ frappe.get_fullname(doc.modified_by) or "" }}</b></p>
+</div>

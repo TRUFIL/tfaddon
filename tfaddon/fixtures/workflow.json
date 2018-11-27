@@ -1,0 +1,363 @@
+[
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow", 
+  "document_type": "Leave Application", 
+  "is_active": 1, 
+  "modified": "2018-04-13 14:03:31.455577", 
+  "name": "Leave Approval", 
+  "override_status": 0, 
+  "states": [
+   {
+    "allow_edit": "Employee", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Open", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Leave Approver", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Approved", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Leave Approver", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Rejected", 
+    "update_field": null, 
+    "update_value": null
+   }
+  ], 
+  "transitions": [
+   {
+    "action": "Approve", 
+    "allowed": "Leave Approver", 
+    "next_state": "Approved", 
+    "state": "Open"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "Leave Approver", 
+    "next_state": "Rejected", 
+    "state": "Open"
+   }
+  ], 
+  "workflow_name": "Leave Approval", 
+  "workflow_state_field": "workflow_state"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow", 
+  "document_type": "Oil Test Reports", 
+  "is_active": 1, 
+  "modified": "2018-05-05 10:26:17.035037", 
+  "name": "Oil Test Reports Workflow", 
+  "override_status": 0, 
+  "states": [
+   {
+    "allow_edit": "Lab Technician", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Draft", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Lab Technician", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Returned", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Lab Manager", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Pending Approval", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Lab Manager", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Approved", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Lab Manager", 
+    "doc_status": "2", 
+    "message": null, 
+    "state": "Cancelled", 
+    "update_field": null, 
+    "update_value": null
+   }
+  ], 
+  "transitions": [
+   {
+    "action": "Send for Approval", 
+    "allowed": "Lab Technician", 
+    "next_state": "Pending Approval", 
+    "state": "Draft"
+   }, 
+   {
+    "action": "Send for Approval", 
+    "allowed": "Lab Technician", 
+    "next_state": "Pending Approval", 
+    "state": "Returned"
+   }, 
+   {
+    "action": "Return", 
+    "allowed": "Lab Manager", 
+    "next_state": "Returned", 
+    "state": "Pending Approval"
+   }, 
+   {
+    "action": "Approve", 
+    "allowed": "Lab Manager", 
+    "next_state": "Approved", 
+    "state": "Pending Approval"
+   }, 
+   {
+    "action": "Cancel", 
+    "allowed": "Lab Manager", 
+    "next_state": "Cancelled", 
+    "state": "Approved"
+   }
+  ], 
+  "workflow_name": "Oil Test Reports Workflow", 
+  "workflow_state_field": "workflow_state"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow", 
+  "document_type": "Sampling Request", 
+  "is_active": 1, 
+  "modified": "2017-10-23 13:59:21.579272", 
+  "name": "Sampling Request Workflow", 
+  "override_status": 0, 
+  "states": [
+   {
+    "allow_edit": "SR Creator", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "To Assign", 
+    "update_field": "", 
+    "update_value": ""
+   }, 
+   {
+    "allow_edit": "SR Closer", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "In Process", 
+    "update_field": "", 
+    "update_value": ""
+   }, 
+   {
+    "allow_edit": "SR Closer", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Closed", 
+    "update_field": "", 
+    "update_value": ""
+   }, 
+   {
+    "allow_edit": "System Manager", 
+    "doc_status": "2", 
+    "message": null, 
+    "state": "Cancelled", 
+    "update_field": null, 
+    "update_value": null
+   }
+  ], 
+  "transitions": [
+   {
+    "action": "Assign", 
+    "allowed": "SR Closer", 
+    "next_state": "In Process", 
+    "state": "To Assign"
+   }
+  ], 
+  "workflow_name": "Sampling Request Workflow", 
+  "workflow_state_field": "workflow_state"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow", 
+  "document_type": "Samples", 
+  "is_active": 1, 
+  "modified": "2018-04-28 13:11:48.706943", 
+  "name": "Samples", 
+  "override_status": 0, 
+  "states": [
+   {
+    "allow_edit": "All", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Draft", 
+    "update_field": "", 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Lab Coordinator", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Collected", 
+    "update_field": "", 
+    "update_value": ""
+   }, 
+   {
+    "allow_edit": "Lab Coordinator", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Dispatched", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Lab Coordinator", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Received", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Lab Coordinator", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "In Process", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Lab Coordinator", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Completed", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Lab Coordinator", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Disposed", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Lab Coordinator", 
+    "doc_status": "2", 
+    "message": null, 
+    "state": "Cancelled", 
+    "update_field": null, 
+    "update_value": null
+   }
+  ], 
+  "transitions": [
+   {
+    "action": "Submit", 
+    "allowed": "Sampler", 
+    "next_state": "Collected", 
+    "state": "Draft"
+   }, 
+   {
+    "action": "Cancel", 
+    "allowed": "Lab Coordinator", 
+    "next_state": "Cancelled", 
+    "state": "Collected"
+   }, 
+   {
+    "action": "Cancel", 
+    "allowed": "Lab Coordinator", 
+    "next_state": "Cancelled", 
+    "state": "Received"
+   }
+  ], 
+  "workflow_name": "Samples", 
+  "workflow_state_field": "status"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow", 
+  "document_type": "Job Card", 
+  "is_active": 1, 
+  "modified": "2018-05-02 13:56:17.862351", 
+  "name": "Job Card Workflow", 
+  "override_status": 0, 
+  "states": [
+   {
+    "allow_edit": "Lab Coordinator", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Draft", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Lab Coordinator", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "In Process", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Lab Coordinator", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Pending Approval", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Lab Coordinator", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Returned", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Lab Coordinator", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Approved", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Lab Coordinator", 
+    "doc_status": "2", 
+    "message": null, 
+    "state": "Cancelled", 
+    "update_field": null, 
+    "update_value": null
+   }
+  ], 
+  "transitions": [
+   {
+    "action": "Assign", 
+    "allowed": "Lab Coordinator", 
+    "next_state": "In Process", 
+    "state": "Draft"
+   }, 
+   {
+    "action": "Cancel", 
+    "allowed": "Lab Coordinator", 
+    "next_state": "Cancelled", 
+    "state": "In Process"
+   }
+  ], 
+  "workflow_name": "Job Card Workflow", 
+  "workflow_state_field": "workflow_state"
+ }
+]

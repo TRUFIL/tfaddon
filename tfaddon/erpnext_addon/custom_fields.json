@@ -1,0 +1,58 @@
+# erpnext.accounts.doctype.sales_invoice
+7  | Customer Legal Name 				| Data 			| customer_legal_name	| customer.customer_legal_name
+8  | Vendor Code 						| Data 			| vendor_code 			| customer.vendor_code
+9  | Invoice For 						| Data 			| summary				|
+
+22 | PO No 								| Data			| po_no					|
+23 | PO Date 							| Date 			| po_date				|
+24 | Tally Inv No 						| Int			| tally_inv_no			|
+
+29 |									| Column Break	| cb1_returns			|
+30 | Reason for Credit Note/ Returns 	| Select		| 						| return_reason\nCustomer Rejection\nError in Invoice\nShort Supply\nRate Reduced\nCash/Business Discount\nBad Debts
+31 | Update Sales Order 				| Check			| update_sales_order	|
+
+# erpnext.accounts.doctype.sales_invoice
+6  | Item Code 							| Data			| cust_item_code 		| 
+
+
+# erpnext.selling.doctype.sales_order
+7  | Customer Legal Name 				| Data 			| customer_legal_name 	| customer.customer_legal_name
+8  | Vendor Code 						| Data 			| vendor_code 			| customer.vendor_code
+10 | Contract Type 						| Select 		| contract_type 		| Fixed Quantity Contract\nRate Contract
+11 | Order Remarks 						| Data 			| order_remarks 		|
+12 | Contract Value 					| Currency 		| contract_value 		| currency
+21 | Validity Date 						| Date 			| validity_date
+85 | Mobilization and Sampling Charges 	| Section Break | mobilization_sampling
+86 | Samples Collected By 				| Select 		| collected_by 			| \nTRUFIL\nCustomer 
+87 | Sampler Traveling Charge 			| Select 		| traveling_charge 		| \nTRUFIL\nCustomer
+88 | Sampler Local Conveyance 			| Select		| local_convance 		| \nTRUFIL\nCustomer
+89 | Column Break 						| cb1_ 			| 
+90 | Sampler Lodging Boarding 			| Select		| lodging_boarding 		| \nTRUFIL\nCustomer
+91 | Sample Transportation Charge 		| Select 		| transportation_charge | \nTRUFIL\nCustomer
+92 | Order Payment Terms 				| Section Break | sb_payment_terms
+93 | Order Based On 					| Select 		| order_based_on 		| \nST\nGST
+94 | Payment After (days) 				| Int 			| credit_days 			|
+95 | Tax Included 						| Select		| tax_included 			| \nYes\nNo
+96 | TDS Deductible (%) 				| Float 		| tds_deductible		|
+97 | Column Break 						| cb1_
+98 | EMD Amount 						| Currency 		| emd_amount
+99 | One Time Security Deposit 			| Currency 		| one_time_security_deposit
+100| One Time Security Deposit Retention Period (days)| Int | otsd_retention_period
+101| Performance Security Deposit (%) 	| Float 		| performance_security_deposit_
+102| Performance Security Deposit Retention Period (days) | Int | psd_retention_period
+103| Customer's Engineer In-Charge 		| Section Break | sb_in_charge
+104| Name 								| Data 			| in_charge_name
+105| Designation 						| Data 			| in_charge_designation
+106| Department 						| Data 			| in_charge_department
+107| Column Break 						| cb1_in_charge | 
+108| Contact No 						| Data 			| in_charge_contact_no
+109| Email 								| Data 			| in_charge_email
+
+# erpnext.selling.doctype.sales_order_item
+3  | Item Code 							| Data 			| cust_item_code
+
+# erpnext.selling.doctype.quotation
+9  | Customer Legal Name 				| Data 			| customer_legal_name 	| customer.customer_legal_name
+16 | Customer Ref 						| Data 			| customer_ref
+17 | Subject 							| Data 			| subject
+96 | Approved By 						| Link 			| approved_by			| User

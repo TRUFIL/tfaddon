@@ -1,0 +1,7 @@
+*.pyc
+*.py~
+.DS_Store
+*.egg-info
+*.swp
+tags
+tfaddon/docs/current
