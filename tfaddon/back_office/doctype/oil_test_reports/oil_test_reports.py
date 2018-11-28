@@ -96,6 +96,8 @@ class OilTestReports(Document):
 		if self.is_new():
 			self.check_duplicate_otr()
 		else:
+			if not self.testing_date:
+				frappe.throw("Testin Date is Mandatory.")
 			if not (self.is_ost or self.is_dga or self.is_furan):
 				frappe.throw(_("Please select the appropriate tests for which this certificate is generated"))
 
