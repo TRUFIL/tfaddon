@@ -32,7 +32,7 @@ class Samples(TFStatusUpdater):
 	def before_cancel(self):
 		active_jo_list = frappe.get_all('Job Card', 
 			fields=['name'], 
-			filters=[['sample', '=', self.sample],['docstatus','<',2]])
+			filters=[['sample', '=', self.name],['docstatus','<',2]])
 		no_of_active_jo = len(active_jo_list)
 		if (no_of_active_jo > 0):
 			if (self.docstatus == 2):

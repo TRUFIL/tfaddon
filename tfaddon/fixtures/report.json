@@ -7,7 +7,36 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Samples\"], [\"status\", \"Samples\"], [\"trufil_container\", \"Samples\"], [\"customer\", \"Samples\"], [\"docstatus\", \"Samples\"], [\"collected_by\", \"Samples\"]], \"add_totals_row\": 0, \"order_by\": \"`tabSamples`.`modified` desc\", \"add_total_row\": 0, \"filters\": [[\"Samples\", \"status\", \"=\", \"Received\", false]]}", 
+  "json": "{\"fields\": [[\"name\", \"Job Card\"], [\"sample\", \"Job Card\"], [\"equipment\", \"Job Card\"], [\"smp_condition\", \"Job Card\"], [\"eq_type\", \"Job Card\"], [\"docstatus\", \"Job Card\"], [\"voltage_class\", \"Job Card\"], [\"capacity\", \"Job Card\"]], \"add_totals_row\": 0, \"order_by\": \"`tabJob Card`.`name` asc\", \"add_total_row\": 0, \"filters\": [[\"Job Card\", \"workflow_state\", \"=\", \"Pending Approval\", false], [\"Job Card\", \"docstatus\", \"!=\", \"2\", false]]}", 
+  "letter_head": "TL Letter Head", 
+  "modified": "2018-12-05 11:38:45.590484", 
+  "module": "Back Office", 
+  "name": "EquipDetails for OST", 
+  "query": null, 
+  "ref_doctype": "Job Card", 
+  "report_name": "EquipDetails for OST", 
+  "report_type": "Report Builder", 
+  "roles": [
+   {
+    "role": "System Manager"
+   }, 
+   {
+    "role": "Lab Coordinator"
+   }, 
+   {
+    "role": "Lab Manager"
+   }
+  ]
+ }, 
+ {
+  "add_total_row": 0, 
+  "apply_user_permissions": 1, 
+  "disabled": 0, 
+  "docstatus": 0, 
+  "doctype": "Report", 
+  "is_standard": "No", 
+  "javascript": null, 
+  "json": "{\"fields\": [[\"name\", \"Samples\"], [\"status\", \"Samples\"], [\"trufil_container\", \"Samples\"], [\"customer\", \"Samples\"], [\"docstatus\", \"Samples\"], [\"collected_by\", \"Samples\"]], \"add_totals_row\": 0, \"order_by\": \"`tabSamples`.`modified` desc\", \"filters\": [[\"Samples\", \"status\", \"=\", \"Received\", false]], \"add_total_row\": 0}", 
   "letter_head": "TL Letter Head", 
   "modified": "2018-09-18 16:29:12.576374", 
   "module": "Sampling", 
@@ -42,9 +71,9 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Job Card\"], [\"eq_owner\", \"Job Card\"], [\"equipment\", \"Job Card\"], [\"location\", \"Job Card\"], [\"smp_point\", \"Job Card\"], [\"manufacturer_full_name\", \"Job Card\"], [\"eq_sl_no\", \"Job Card\"], [\"eq_yom\", \"Job Card\"], [\"owner_eq_id\", \"Job Card\"], [\"eq_type\", \"Job Card\"], [\"eq_cooling\", \"Job Card\"], [\"eq_oil_type\", \"Job Card\"], [\"eq_oil_qty\", \"Job Card\"], [\"voltage_class\", \"Job Card\"], [\"voltage\", \"Job Card\"], [\"current\", \"Job Card\"], [\"eq_phases\", \"Job Card\"], [\"docstatus\", \"Job Card\"], [\"capacity\", \"Job Card\"], [\"loc_area\", \"Job Card\"], [\"loc_location\", \"Job Card\"], [\"loc_cd\", \"Job Card\"], [\"loc_ccd\", \"Job Card\"], [\"loc_installation\", \"Job Card\"], [\"loc_is_critical\", \"Job Card\"], [\"modified\", \"Job Card\"]], \"add_totals_row\": 0, \"order_by\": \"`tabJob Card`.`name` asc\", \"add_total_row\": 0, \"filters\": [[\"Job Card\", \"customer\", \"like\", \"%ril%haz%\", false]]}", 
+  "json": "{\"fields\": [[\"name\", \"Job Card\"], [\"eq_owner\", \"Job Card\"], [\"equipment\", \"Job Card\"], [\"location\", \"Job Card\"], [\"smp_point\", \"Job Card\"], [\"manufacturer_full_name\", \"Job Card\"], [\"eq_sl_no\", \"Job Card\"], [\"eq_yom\", \"Job Card\"], [\"owner_eq_id\", \"Job Card\"], [\"eq_type\", \"Job Card\"], [\"eq_cooling\", \"Job Card\"], [\"eq_oil_type\", \"Job Card\"], [\"eq_oil_qty\", \"Job Card\"], [\"voltage_class\", \"Job Card\"], [\"capacity\", \"Job Card\"], [\"voltage\", \"Job Card\"], [\"current\", \"Job Card\"], [\"eq_phases\", \"Job Card\"], [\"loc_area\", \"Job Card\"], [\"loc_location\", \"Job Card\"], [\"loc_cd\", \"Job Card\"], [\"loc_ccd\", \"Job Card\"], [\"loc_installation\", \"Job Card\"], [\"loc_is_critical\", \"Job Card\"], [\"modified\", \"Job Card\"], [\"docstatus\", \"Job Card\"], [\"sample\", \"Job Card\"]], \"add_totals_row\": 0, \"order_by\": \"`tabJob Card`.`name` asc\", \"add_total_row\": 0, \"filters\": [[\"Job Card\", \"customer\", \"like\", \"%j3%\", false], [\"Job Card\", \"docstatus\", \"!=\", \"2\", false]]}", 
   "letter_head": "TL Letter Head", 
-  "modified": "2018-10-15 13:26:43.795945", 
+  "modified": "2019-01-31 17:03:24.467102", 
   "module": "Back Office", 
   "name": "Equip&LocnDetails", 
   "query": null, 
@@ -71,9 +100,9 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"report_date\", \"Oil Test Reports\"], [\"sample_id\", \"Oil Test Reports\"], [\"sample\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"colour\", \"Oil Test Reports\"], [\"colour_interpretation\", \"Oil Test Reports\"], [\"ost_spr_2\", \"Oil Test Reports\"], [\"ost_bdv\", \"Oil Test Reports\"], [\"ost_ift\", \"Oil Test Reports\"], [\"ost_wc\", \"Oil Test Reports\"], [\"ost_nv\", \"Oil Test Reports\"], [\"ost_interpretation\", \"Oil Test Reports\"], [\"ost_frequency\", \"Oil Test Reports\"], [\"recommendation\", \"Oil Test Reports\"], [\"sales_order\", \"Oil Test Reports\"], [\"eq_owner\", \"Oil Test Reports\"], [\"equipment\", \"Oil Test Reports\"], [\"eq_manufacturer\", \"Oil Test Reports\"], [\"eq_sl_no\", \"Oil Test Reports\"], [\"customer\", \"Oil Test Reports\"], [\"owner_eq_id\", \"Oil Test Reports\"], [\"collection_date\", \"Oil Test Reports\"], [\"smp_point\", \"Oil Test Reports\"], [\"issued_to\", \"Oil Test Reports\"], [\"location\", \"Oil Test Reports\"], [\"loc_area\", \"Oil Test Reports\"], [\"loc_location\", \"Oil Test Reports\"], [\"loc_cd\", \"Oil Test Reports\"], [\"loc_ccd\", \"Oil Test Reports\"], [\"modified\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"ost_density\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` asc\", \"filters\": [[\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false], [\"Oil Test Reports\", \"sales_order\", \"like\", \"%00089%\", false]], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"report_date\", \"Oil Test Reports\"], [\"sample_id\", \"Oil Test Reports\"], [\"sample\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"colour\", \"Oil Test Reports\"], [\"colour_interpretation\", \"Oil Test Reports\"], [\"ost_bdv\", \"Oil Test Reports\"], [\"ost_wc\", \"Oil Test Reports\"], [\"ost_nv\", \"Oil Test Reports\"], [\"ost_spr_2\", \"Oil Test Reports\"], [\"ost_ift\", \"Oil Test Reports\"], [\"ost_density\", \"Oil Test Reports\"], [\"ost_frequency\", \"Oil Test Reports\"], [\"recommendation\", \"Oil Test Reports\"], [\"sales_order\", \"Oil Test Reports\"], [\"eq_owner\", \"Oil Test Reports\"], [\"equipment\", \"Oil Test Reports\"], [\"eq_manufacturer\", \"Oil Test Reports\"], [\"eq_sl_no\", \"Oil Test Reports\"], [\"customer\", \"Oil Test Reports\"], [\"owner_eq_id\", \"Oil Test Reports\"], [\"collection_date\", \"Oil Test Reports\"], [\"smp_point\", \"Oil Test Reports\"], [\"issued_to\", \"Oil Test Reports\"], [\"location\", \"Oil Test Reports\"], [\"loc_area\", \"Oil Test Reports\"], [\"loc_location\", \"Oil Test Reports\"], [\"loc_cd\", \"Oil Test Reports\"], [\"loc_ccd\", \"Oil Test Reports\"], [\"modified\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"ost_interpretation\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` asc\", \"add_total_row\": 0, \"filters\": [[\"Oil Test Reports\", \"docstatus\", \"!=\", \"2\", false], [\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false]]}", 
   "letter_head": "TL Letter Head", 
-  "modified": "2018-06-07 12:35:33.298019", 
+  "modified": "2019-02-22 12:38:55.569885", 
   "module": "Back Office", 
   "name": "BRPL", 
   "query": null, 
@@ -109,9 +138,9 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"ost_density\", \"Oil Test Reports\"], [\"ost_spr_1\", \"Oil Test Reports\"], [\"ost_spr_2\", \"Oil Test Reports\"], [\"ost_tand_1\", \"Oil Test Reports\"], [\"ost_tand_2\", \"Oil Test Reports\"], [\"ost_bdv\", \"Oil Test Reports\"], [\"ost_ift\", \"Oil Test Reports\"], [\"ost_wc\", \"Oil Test Reports\"], [\"ost_nv\", \"Oil Test Reports\"], [\"ost_fp\", \"Oil Test Reports\"], [\"ost_interpretation\", \"Oil Test Reports\"], [\"dga_tgc\", \"Oil Test Reports\"], [\"dga_tdcg\", \"Oil Test Reports\"], [\"dga_tdcg_tcg\", \"Oil Test Reports\"], [\"dga_h2\", \"Oil Test Reports\"], [\"dga_o2\", \"Oil Test Reports\"], [\"dga_n2\", \"Oil Test Reports\"], [\"dga_co\", \"Oil Test Reports\"], [\"dga_ch4\", \"Oil Test Reports\"], [\"dga_co2\", \"Oil Test Reports\"], [\"dga_c2h6\", \"Oil Test Reports\"], [\"dga_c2h4\", \"Oil Test Reports\"], [\"dga_c2h2\", \"Oil Test Reports\"], [\"dga_interpretation\", \"Oil Test Reports\"], [\"furan_5h2f\", \"Oil Test Reports\"], [\"furan_2fa\", \"Oil Test Reports\"], [\"furan_2f\", \"Oil Test Reports\"], [\"furan_2a\", \"Oil Test Reports\"], [\"furan_5m2f\", \"Oil Test Reports\"], [\"furan_tfc\", \"Oil Test Reports\"], [\"furan_interpretation\", \"Oil Test Reports\"], [\"owner_eq_id\", \"Oil Test Reports\"], [\"manufacturer_full_name\", \"Oil Test Reports\"], [\"eq_sl_no\", \"Oil Test Reports\"], [\"capacity\", \"Oil Test Reports\"], [\"loc_ccd\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"installation_location\", \"Oil Test Reports\"], [\"loc_cd\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` asc\", \"add_total_row\": 0, \"filters\": [[\"Oil Test Reports\", \"workflow_state\", \"=\", \"Approved\", false]]}", 
+  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"report_date\", \"Oil Test Reports\"], [\"sample_id\", \"Oil Test Reports\"], [\"sample\", \"Oil Test Reports\"], [\"trufil_container\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"colour\", \"Oil Test Reports\"], [\"ost_density\", \"Oil Test Reports\"], [\"ost_spr_1\", \"Oil Test Reports\"], [\"ost_spr_2\", \"Oil Test Reports\"], [\"ost_tand_1\", \"Oil Test Reports\"], [\"ost_tand_2\", \"Oil Test Reports\"], [\"ost_bdv\", \"Oil Test Reports\"], [\"ost_ift\", \"Oil Test Reports\"], [\"ost_wc\", \"Oil Test Reports\"], [\"ost_nv\", \"Oil Test Reports\"], [\"ost_ss\", \"Oil Test Reports\"], [\"ost_fp\", \"Oil Test Reports\"], [\"ost_interpretation\", \"Oil Test Reports\"], [\"dga_tgc\", \"Oil Test Reports\"], [\"dga_tdcg\", \"Oil Test Reports\"], [\"dga_h2\", \"Oil Test Reports\"], [\"dga_o2\", \"Oil Test Reports\"], [\"dga_n2\", \"Oil Test Reports\"], [\"dga_co\", \"Oil Test Reports\"], [\"dga_ch4\", \"Oil Test Reports\"], [\"dga_co2\", \"Oil Test Reports\"], [\"dga_c2h6\", \"Oil Test Reports\"], [\"dga_c2h4\", \"Oil Test Reports\"], [\"dga_c2h2\", \"Oil Test Reports\"], [\"dga_interpretation\", \"Oil Test Reports\"], [\"furan_5h2f\", \"Oil Test Reports\"], [\"furan_2fa\", \"Oil Test Reports\"], [\"furan_2f\", \"Oil Test Reports\"], [\"furan_2a\", \"Oil Test Reports\"], [\"furan_5m2f\", \"Oil Test Reports\"], [\"furan_tfc\", \"Oil Test Reports\"], [\"furan_interpretation\", \"Oil Test Reports\"], [\"recommendation\", \"Oil Test Reports\"], [\"sales_order\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` asc\", \"add_total_row\": 0, \"filters\": [[\"Oil Test Reports\", \"workflow_state\", \"=\", \"Approved\", false], [\"Oil Test Reports\", \"customer\", \"like\", \"%ril%haz%\", false], [\"Oil Test Reports\", \"sales_order\", \"like\", \"%00052%\", false], [\"Oil Test Reports\", \"collection_date\", \"Between\", [\"2018-10-01\", \"2018-12-25\"], false]]}", 
   "letter_head": "TL Letter Head", 
-  "modified": "2018-04-18 11:55:54.310960", 
+  "modified": "2019-03-08 11:34:32.426240", 
   "module": "Back Office", 
   "name": "OST+DGA+Furan Results", 
   "query": null, 
@@ -147,7 +176,7 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"sample\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"sales_order\", \"Oil Test Reports\"], [\"issued_to\", \"Oil Test Reports\"], [\"equipment\", \"Oil Test Reports\"], [\"eq_owner_name\", \"Oil Test Reports\"], [\"capacity\", \"Oil Test Reports\"], [\"voltage\", \"Oil Test Reports\"], [\"location\", \"Oil Test Reports\"], [\"installation_location\", \"Oil Test Reports\"], [\"modified\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` asc\", \"add_total_row\": 0, \"filters\": [[\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false]]}", 
+  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"sample\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"sales_order\", \"Oil Test Reports\"], [\"issued_to\", \"Oil Test Reports\"], [\"equipment\", \"Oil Test Reports\"], [\"eq_owner_name\", \"Oil Test Reports\"], [\"capacity\", \"Oil Test Reports\"], [\"voltage\", \"Oil Test Reports\"], [\"location\", \"Oil Test Reports\"], [\"installation_location\", \"Oil Test Reports\"], [\"modified\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` asc\", \"filters\": [[\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false]], \"add_total_row\": 0}", 
   "letter_head": "TL Letter Head", 
   "modified": "2018-04-18 12:22:59.996302", 
   "module": "Back Office", 
@@ -223,7 +252,7 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"report_date\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"eq_owner\", \"Oil Test Reports\"], [\"installation_location\", \"Oil Test Reports\"], [\"loc_cd\", \"Oil Test Reports\"], [\"smp_point\", \"Oil Test Reports\"], [\"eq_sl_no\", \"Oil Test Reports\"], [\"ost_bdv\", \"Oil Test Reports\"], [\"ost_ift\", \"Oil Test Reports\"], [\"ost_wc\", \"Oil Test Reports\"], [\"ost_nv\", \"Oil Test Reports\"], [\"ost_fp\", \"Oil Test Reports\"], [\"ost_density\", \"Oil Test Reports\"], [\"ost_spr_1\", \"Oil Test Reports\"], [\"ost_spr_2\", \"Oil Test Reports\"], [\"ost_tand_1\", \"Oil Test Reports\"], [\"ost_tand_2\", \"Oil Test Reports\"], [\"ost_interpretation\", \"Oil Test Reports\"], [\"dga_tgc\", \"Oil Test Reports\"], [\"dga_h2\", \"Oil Test Reports\"], [\"dga_co\", \"Oil Test Reports\"], [\"dga_co2\", \"Oil Test Reports\"], [\"dga_ch4\", \"Oil Test Reports\"], [\"dga_c2h6\", \"Oil Test Reports\"], [\"dga_c2h4\", \"Oil Test Reports\"], [\"dga_c2h2\", \"Oil Test Reports\"], [\"dga_interpretation\", \"Oil Test Reports\"], [\"furan_5h2f\", \"Oil Test Reports\"], [\"furan_2fa\", \"Oil Test Reports\"], [\"furan_2f\", \"Oil Test Reports\"], [\"furan_2a\", \"Oil Test Reports\"], [\"furan_5m2f\", \"Oil Test Reports\"], [\"furan_tfc\", \"Oil Test Reports\"], [\"furan_interpretation\", \"Oil Test Reports\"], [\"equipment\", \"Oil Test Reports\"], [\"location\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`modified` desc\", \"filters\": [], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"report_date\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"eq_owner\", \"Oil Test Reports\"], [\"installation_location\", \"Oil Test Reports\"], [\"loc_cd\", \"Oil Test Reports\"], [\"smp_point\", \"Oil Test Reports\"], [\"eq_sl_no\", \"Oil Test Reports\"], [\"ost_bdv\", \"Oil Test Reports\"], [\"ost_ift\", \"Oil Test Reports\"], [\"ost_wc\", \"Oil Test Reports\"], [\"ost_nv\", \"Oil Test Reports\"], [\"ost_fp\", \"Oil Test Reports\"], [\"ost_density\", \"Oil Test Reports\"], [\"ost_spr_1\", \"Oil Test Reports\"], [\"ost_spr_2\", \"Oil Test Reports\"], [\"ost_tand_1\", \"Oil Test Reports\"], [\"ost_tand_2\", \"Oil Test Reports\"], [\"ost_interpretation\", \"Oil Test Reports\"], [\"dga_tgc\", \"Oil Test Reports\"], [\"dga_h2\", \"Oil Test Reports\"], [\"dga_co\", \"Oil Test Reports\"], [\"dga_co2\", \"Oil Test Reports\"], [\"dga_ch4\", \"Oil Test Reports\"], [\"dga_c2h6\", \"Oil Test Reports\"], [\"dga_c2h4\", \"Oil Test Reports\"], [\"dga_c2h2\", \"Oil Test Reports\"], [\"dga_interpretation\", \"Oil Test Reports\"], [\"furan_5h2f\", \"Oil Test Reports\"], [\"furan_2fa\", \"Oil Test Reports\"], [\"furan_2f\", \"Oil Test Reports\"], [\"furan_2a\", \"Oil Test Reports\"], [\"furan_5m2f\", \"Oil Test Reports\"], [\"furan_tfc\", \"Oil Test Reports\"], [\"furan_interpretation\", \"Oil Test Reports\"], [\"equipment\", \"Oil Test Reports\"], [\"location\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`modified` desc\", \"add_total_row\": 0, \"filters\": []}", 
   "letter_head": "TL Letter Head", 
   "modified": "2018-06-30 10:06:04.812588", 
   "module": "Back Office", 
@@ -380,9 +409,9 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"sample_id\", \"Oil Test Reports\"], [\"sample\", \"Oil Test Reports\"], [\"dga_tgc\", \"Oil Test Reports\"], [\"dga_tdcg\", \"Oil Test Reports\"], [\"dga_tdcg_tcg\", \"Oil Test Reports\"], [\"dga_h2\", \"Oil Test Reports\"], [\"dga_o2\", \"Oil Test Reports\"], [\"dga_n2\", \"Oil Test Reports\"], [\"dga_co\", \"Oil Test Reports\"], [\"dga_ch4\", \"Oil Test Reports\"], [\"dga_co2\", \"Oil Test Reports\"], [\"dga_c2h6\", \"Oil Test Reports\"], [\"dga_c2h4\", \"Oil Test Reports\"], [\"dga_c2h2\", \"Oil Test Reports\"], [\"dga_c3h8\", \"Oil Test Reports\"], [\"dga_c3h6\", \"Oil Test Reports\"], [\"dga_interpretation\", \"Oil Test Reports\"], [\"dga_frequency\", \"Oil Test Reports\"], [\"recommendation\", \"Oil Test Reports\"], [\"sales_order\", \"Oil Test Reports\"], [\"equipment\", \"Oil Test Reports\"], [\"collection_date\", \"Oil Test Reports\"], [\"smp_point\", \"Oil Test Reports\"], [\"modified\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"h2_limit\", \"Oil Test Reports\"], [\"co_limit\", \"Oil Test Reports\"], [\"co2_limit\", \"Oil Test Reports\"], [\"c2h6_limit\", \"Oil Test Reports\"], [\"ch4_limit\", \"Oil Test Reports\"], [\"c2h2_limit\", \"Oil Test Reports\"], [\"c2h4_limit\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`modified` desc\", \"filters\": [[\"Oil Test Reports\", \"docstatus\", \"!=\", \"2\", false], [\"Oil Test Reports\", \"is_dga\", \"=\", 1, false], [\"Oil Test Reports\", \"customer\", \"like\", \"%mahan%\", false], [\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false]], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"sample_id\", \"Oil Test Reports\"], [\"sample\", \"Oil Test Reports\"], [\"dga_tgc\", \"Oil Test Reports\"], [\"dga_tdcg\", \"Oil Test Reports\"], [\"dga_tdcg_tcg\", \"Oil Test Reports\"], [\"dga_h2\", \"Oil Test Reports\"], [\"dga_o2\", \"Oil Test Reports\"], [\"dga_n2\", \"Oil Test Reports\"], [\"dga_co\", \"Oil Test Reports\"], [\"dga_ch4\", \"Oil Test Reports\"], [\"dga_co2\", \"Oil Test Reports\"], [\"dga_c2h6\", \"Oil Test Reports\"], [\"dga_c2h4\", \"Oil Test Reports\"], [\"dga_c2h2\", \"Oil Test Reports\"], [\"dga_c3h8\", \"Oil Test Reports\"], [\"dga_c3h6\", \"Oil Test Reports\"], [\"dga_interpretation\", \"Oil Test Reports\"], [\"dga_frequency\", \"Oil Test Reports\"], [\"recommendation\", \"Oil Test Reports\"], [\"sales_order\", \"Oil Test Reports\"], [\"equipment\", \"Oil Test Reports\"], [\"collection_date\", \"Oil Test Reports\"], [\"smp_point\", \"Oil Test Reports\"], [\"modified\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"h2_limit\", \"Oil Test Reports\"], [\"co_limit\", \"Oil Test Reports\"], [\"co2_limit\", \"Oil Test Reports\"], [\"c2h6_limit\", \"Oil Test Reports\"], [\"ch4_limit\", \"Oil Test Reports\"], [\"c2h2_limit\", \"Oil Test Reports\"], [\"c2h4_limit\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` asc\", \"add_total_row\": 0, \"filters\": [[\"Oil Test Reports\", \"docstatus\", \"!=\", \"2\", false], [\"Oil Test Reports\", \"is_dga\", \"=\", 1, false], [\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false]]}", 
   "letter_head": "TL Letter Head", 
-  "modified": "2018-08-16 13:28:44.998827", 
+  "modified": "2019-01-12 14:17:28.565630", 
   "module": "Back Office", 
   "name": "DGA Report", 
   "query": null, 
@@ -3490,7 +3519,7 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"sample_id\", \"Oil Test Reports\"], [\"sample\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"sales_order\", \"Oil Test Reports\"], [\"eq_owner\", \"Oil Test Reports\"], [\"equipment\", \"Oil Test Reports\"], [\"customer\", \"Oil Test Reports\"], [\"location\", \"Oil Test Reports\"], [\"modified\", \"Oil Test Reports\"], [\"smp_point\", \"Oil Test Reports\"], [\"collection_date\", \"Oil Test Reports\"], [\"issued_to\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` asc\", \"filters\": [[\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false]], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"sample_id\", \"Oil Test Reports\"], [\"sample\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"sales_order\", \"Oil Test Reports\"], [\"eq_owner\", \"Oil Test Reports\"], [\"equipment\", \"Oil Test Reports\"], [\"customer\", \"Oil Test Reports\"], [\"location\", \"Oil Test Reports\"], [\"modified\", \"Oil Test Reports\"], [\"smp_point\", \"Oil Test Reports\"], [\"collection_date\", \"Oil Test Reports\"], [\"issued_to\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` asc\", \"add_total_row\": 0, \"filters\": [[\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false]]}", 
   "letter_head": "TL Letter Head", 
   "modified": "2018-06-07 11:01:50.358944", 
   "module": "Back Office", 
@@ -3528,9 +3557,9 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"report_date\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"sales_order\", \"Oil Test Reports\"], [\"eq_manufacturer\", \"Oil Test Reports\"], [\"eq_sl_no\", \"Oil Test Reports\"], [\"customer\", \"Oil Test Reports\"], [\"voltage_class\", \"Oil Test Reports\"], [\"voltage\", \"Oil Test Reports\"], [\"owner_eq_id\", \"Oil Test Reports\"], [\"collection_date\", \"Oil Test Reports\"], [\"smp_point\", \"Oil Test Reports\"], [\"loc_area\", \"Oil Test Reports\"], [\"loc_location\", \"Oil Test Reports\"], [\"loc_cd\", \"Oil Test Reports\"], [\"loc_ccd\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"eq_owner\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` asc\", \"filters\": [[\"Oil Test Reports\", \"approved_on\", \"Between\", [\"2018-07-30\", \"2018-07-31\"], false]], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"report_date\", \"Oil Test Reports\"], [\"eq_manufacturer\", \"Oil Test Reports\"], [\"eq_sl_no\", \"Oil Test Reports\"], [\"loc_location\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"loc_cd\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`modified` desc\", \"add_total_row\": 0, \"filters\": [[\"Oil Test Reports\", \"sales_order\", \"like\", \"%TF-SO-18-00052%\", false], [\"Oil Test Reports\", \"report_date\", \"Between\", [\"2018-10-01\", \"2019-03-15\"], false], [\"Oil Test Reports\", \"workflow_state\", \"=\", \"Approved\", false]]}", 
   "letter_head": "TL Letter Head", 
-  "modified": "2018-07-31 11:39:32.363615", 
+  "modified": "2019-03-15 11:28:51.568664", 
   "module": "Back Office", 
   "name": "transmittal report", 
   "query": null, 
@@ -3566,9 +3595,9 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Samples\"], [\"sample_id\", \"Samples\"], [\"status\", \"Samples\"], [\"sampler_name\", \"Samples\"], [\"sampling_request\", \"Samples\"], [\"sales_order\", \"Samples\"], [\"collection_date\", \"Samples\"], [\"location\", \"Samples\"], [\"equipment\", \"Samples\"], [\"customer\", \"Samples\"], [\"status\", \"Sampling Containers\"], [\"docstatus\", \"Samples\"]], \"add_totals_row\": 0, \"order_by\": \"`tabSamples`.`modified` desc\", \"add_total_row\": 0, \"filters\": [[\"Samples\", \"customer\", \"like\", \"%ril-hazira%\", false], [\"Samples\", \"sampler_name\", \"=\", \"Laxman Gonbare\", false], [\"Samples\", \"status\", \"=\", \"Completed\", false]]}", 
+  "json": "{\"fields\": [[\"name\", \"Samples\"], [\"status\", \"Samples\"], [\"sampling_request\", \"Samples\"], [\"sales_order\", \"Samples\"], [\"collection_date\", \"Samples\"], [\"customer\", \"Samples\"], [\"docstatus\", \"Samples\"]], \"add_totals_row\": 0, \"order_by\": \"`tabSamples`.`name` asc\", \"add_total_row\": 0, \"filters\": []}", 
   "letter_head": "TL Letter Head", 
-  "modified": "2018-03-30 21:20:11.154370", 
+  "modified": "2019-01-07 16:03:40.480133", 
   "module": "Sampling", 
   "name": "sample collected list", 
   "query": null, 
@@ -3601,9 +3630,9 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Samples\"], [\"status\", \"Samples\"], [\"trufil_container\", \"Samples\"], [\"sampling_request\", \"Samples\"], [\"sales_order\", \"Samples\"], [\"dispatch_date\", \"Samples\"], [\"receipt_date\", \"Samples\"], [\"docstatus\", \"Samples\"], [\"collected_by\", \"Samples\"], [\"sampler_name\", \"Samples\"], [\"collection_date\", \"Samples\"], [\"bag_no\", \"Samples\"], [\"creation\", \"Samples\"], [\"modified\", \"Samples\"]], \"add_totals_row\": 0, \"order_by\": \"`tabSamples`.`name` asc\", \"filters\": [], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Samples\"], [\"status\", \"Samples\"], [\"trufil_container\", \"Samples\"], [\"collected_by\", \"Samples\"], [\"sampler_name\", \"Samples\"], [\"sampling_request\", \"Samples\"], [\"sales_order\", \"Samples\"], [\"collection_date\", \"Samples\"], [\"bag_no\", \"Samples\"], [\"dispatch_date\", \"Samples\"], [\"receipt_date\", \"Samples\"], [\"customer\", \"Samples\"], [\"creation\", \"Samples\"], [\"modified\", \"Samples\"], [\"docstatus\", \"Samples\"], [\"smp_type\", \"Samples\"]], \"add_totals_row\": 0, \"order_by\": \"`tabSamples`.`name` asc\", \"add_total_row\": 0, \"filters\": [[\"Samples\", \"collection_date\", \">\", \"2018-09-30\", false], [\"Samples\", \"status\", \"!=\", \"Completed\", false], [\"Samples\", \"docstatus\", \"!=\", \"2\", false], [\"Samples\", \"_comments\", \"not like\", \"%Sample completed%\", false]]}", 
   "letter_head": "TL Letter Head", 
-  "modified": "2018-09-12 10:33:22.422178", 
+  "modified": "2019-02-19 15:52:35.735820", 
   "module": "Sampling", 
   "name": "Sample List", 
   "query": null, 
@@ -3636,9 +3665,9 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"loc_area\", \"Oil Test Reports\"], [\"loc_location\", \"Oil Test Reports\"], [\"loc_cd\", \"Oil Test Reports\"], [\"eq_manufacturer\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"eq_sl_no\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` asc\", \"filters\": [[\"Oil Test Reports\", \"workflow_state\", \"=\", \"Approved\", false], [\"Oil Test Reports\", \"customer\", \"like\", \"%metro-mu%\", false]], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"eq_manufacturer\", \"Oil Test Reports\"], [\"eq_sl_no\", \"Oil Test Reports\"], [\"loc_area\", \"Oil Test Reports\"], [\"loc_location\", \"Oil Test Reports\"], [\"loc_cd\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` desc\", \"add_total_row\": 0, \"filters\": [[\"Oil Test Reports\", \"customer\", \"like\", \"%dcpp%\", false]]}", 
   "letter_head": "TL Letter Head", 
-  "modified": "2018-06-08 17:53:19.310844", 
+  "modified": "2019-03-14 12:43:47.724593", 
   "module": "Back Office", 
   "name": "Report Transmittal", 
   "query": null, 
@@ -3671,7 +3700,7 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Samples\"], [\"trufil_container\", \"Samples\"], [\"collection_date\", \"Samples\"], [\"bag_no\", \"Samples\"], [\"loc_area\", \"Samples\"], [\"loc_location\", \"Samples\"], [\"customer\", \"Samples\"], [\"docstatus\", \"Samples\"], [\"status\", \"Samples\"]], \"add_totals_row\": 0, \"order_by\": \"`tabSamples`.`modified` desc\", \"filters\": [], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Samples\"], [\"trufil_container\", \"Samples\"], [\"collection_date\", \"Samples\"], [\"bag_no\", \"Samples\"], [\"loc_area\", \"Samples\"], [\"loc_location\", \"Samples\"], [\"customer\", \"Samples\"], [\"docstatus\", \"Samples\"], [\"status\", \"Samples\"]], \"add_totals_row\": 0, \"order_by\": \"`tabSamples`.`modified` desc\", \"add_total_row\": 0, \"filters\": []}", 
   "letter_head": "TL Letter Head", 
   "modified": "2018-06-09 01:23:40.083112", 
   "module": "Sampling", 
@@ -3706,9 +3735,9 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Equipments\"], [\"eq_owner\", \"Equipments\"], [\"eq_type\", \"Equipments\"], [\"eq_sl_no\", \"Equipments\"], [\"eq_yom\", \"Equipments\"], [\"eq_oil_type\", \"Equipments\"], [\"eq_oil_qty\", \"Equipments\"], [\"eq_tap_changer_type\", \"Equipments\"], [\"owner_eq_id\", \"Equipments\"], [\"eq_group\", \"Equipments\"], [\"manufacturer_full_name\", \"Equipments\"], [\"capacity\", \"Equipments\"], [\"voltage\", \"Equipments\"], [\"voltage_class\", \"Equipments\"], [\"eq_capacity\", \"Equipments\"], [\"eq_phases\", \"Equipments\"], [\"eq_pv\", \"Equipments\"], [\"eq_sv\", \"Equipments\"], [\"eq_tv\", \"Equipments\"], [\"eq_pc\", \"Equipments\"], [\"eq_rating1\", \"Equipments\"], [\"docstatus\", \"Equipments\"], [\"eq_cooling\", \"Equipments\"]], \"add_totals_row\": 0, \"order_by\": \"`tabEquipments`.`name` asc\", \"filters\": [[\"Equipments\", \"eq_owner\", \"=\", \"Essar-Mahan\", false]], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Equipments\"], [\"eq_owner\", \"Equipments\"], [\"eq_type\", \"Equipments\"], [\"eq_sl_no\", \"Equipments\"], [\"eq_yom\", \"Equipments\"], [\"eq_oil_type\", \"Equipments\"], [\"eq_oil_qty\", \"Equipments\"], [\"eq_tap_changer_type\", \"Equipments\"], [\"owner_eq_id\", \"Equipments\"], [\"eq_group\", \"Equipments\"], [\"manufacturer_full_name\", \"Equipments\"], [\"capacity\", \"Equipments\"], [\"voltage\", \"Equipments\"], [\"voltage_class\", \"Equipments\"], [\"eq_capacity\", \"Equipments\"], [\"eq_phases\", \"Equipments\"], [\"eq_pv\", \"Equipments\"], [\"eq_sv\", \"Equipments\"], [\"eq_tv\", \"Equipments\"], [\"eq_pc\", \"Equipments\"], [\"eq_cooling\", \"Equipments\"], [\"eq_rating1\", \"Equipments\"], [\"docstatus\", \"Equipments\"], [\"modified\", \"Equipments\"]], \"add_totals_row\": 0, \"order_by\": \"`tabEquipments`.`modified` desc\", \"add_total_row\": 0, \"filters\": [[\"Equipments\", \"eq_owner\", \"=\", \"BSES-Rajdhani-New Delhi\", false]]}", 
   "letter_head": "TL Letter Head", 
-  "modified": "2018-09-01 12:29:41.747311", 
+  "modified": "2018-12-14 17:11:59.239740", 
   "module": "Back Office", 
   "name": "Equipment List", 
   "query": null, 
@@ -3747,9 +3776,9 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"furan_tfc\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"fruan_frequency\", \"Oil Test Reports\"], [\"furan_interpretation\", \"Oil Test Reports\"], [\"recommendation\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` asc\", \"filters\": [[\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false], [\"Oil Test Reports\", \"is_furan\", \"=\", 1, false]], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"furan_2fa\", \"Oil Test Reports\"], [\"furan_2a\", \"Oil Test Reports\"], [\"furan_5m2f\", \"Oil Test Reports\"], [\"furan_2f\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"furan_5h2f\", \"Oil Test Reports\"], [\"furan_tfc\", \"Oil Test Reports\"], [\"furan_interpretation\", \"Oil Test Reports\"], [\"fruan_frequency\", \"Oil Test Reports\"], [\"recommendation\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` asc\", \"add_total_row\": 0, \"filters\": [[\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false], [\"Oil Test Reports\", \"is_furan\", \"=\", 1, false]]}", 
   "letter_head": "TL Letter Head", 
-  "modified": "2018-07-10 12:12:52.563095", 
+  "modified": "2018-12-06 12:51:39.438465", 
   "module": "Back Office", 
   "name": "Total Furan", 
   "query": null, 
@@ -3782,7 +3811,7 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Sampling Request\"], [\"sales_order\", \"Sampling Request\"], [\"created_by\", \"Sampling Request\"], [\"title\", \"Sampling Request\"], [\"customer\", \"Sampling Request\"], [\"action_status\", \"Sampling Request\"], [\"est_start_date\", \"Sampling Request\"], [\"assigned_to\", \"Sampling Request\"], [\"job_done_by\", \"Sampling Request\"], [\"act_samples\", \"Sampling Request\"], [\"modified\", \"Sampling Request\"], [\"docstatus\", \"Sampling Request\"], [\"est_samples\", \"Sampling Request\"]], \"add_totals_row\": 0, \"order_by\": \"`tabSampling Request`.`modified` desc\", \"filters\": [], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Sampling Request\"], [\"sales_order\", \"Sampling Request\"], [\"created_by\", \"Sampling Request\"], [\"title\", \"Sampling Request\"], [\"customer\", \"Sampling Request\"], [\"action_status\", \"Sampling Request\"], [\"est_start_date\", \"Sampling Request\"], [\"assigned_to\", \"Sampling Request\"], [\"job_done_by\", \"Sampling Request\"], [\"act_samples\", \"Sampling Request\"], [\"modified\", \"Sampling Request\"], [\"docstatus\", \"Sampling Request\"], [\"est_samples\", \"Sampling Request\"]], \"add_totals_row\": 0, \"order_by\": \"`tabSampling Request`.`modified` desc\", \"add_total_row\": 0, \"filters\": []}", 
   "letter_head": "TL Letter Head", 
   "modified": "2018-06-22 15:09:40.055100", 
   "module": "Back Office", 
@@ -3814,9 +3843,9 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Job Card\"], [\"sample\", \"Job Card\"], [\"eq_owner\", \"Job Card\"], [\"equipment\", \"Job Card\"], [\"location\", \"Job Card\"], [\"smp_point\", \"Job Card\"], [\"smp_condition\", \"Job Card\"], [\"trufil_container\", \"Job Card\"], [\"loc_area\", \"Job Card\"], [\"loc_location\", \"Job Card\"], [\"loc_cd\", \"Job Card\"], [\"customer\", \"Job Card\"], [\"sales_order\", \"Job Card\"], [\"issued_to\", \"Job Card\"], [\"modified\", \"Job Card\"], [\"docstatus\", \"Job Card\"], [\"eq_manufacturer\", \"Job Card\"], [\"eq_sl_no\", \"Job Card\"]], \"add_totals_row\": 0, \"order_by\": \"`tabJob Card`.`name` asc\", \"filters\": [[\"Job Card\", \"customer\", \"like\", \"%jsw-ratnagiri%\", false], [\"Job Card\", \"workflow_state\", \"=\", \"Draft\", false]], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Job Card\"], [\"sample\", \"Job Card\"], [\"eq_owner\", \"Job Card\"], [\"equipment\", \"Job Card\"], [\"location\", \"Job Card\"], [\"smp_point\", \"Job Card\"], [\"smp_condition\", \"Job Card\"], [\"trufil_container\", \"Job Card\"], [\"loc_area\", \"Job Card\"], [\"loc_location\", \"Job Card\"], [\"loc_cd\", \"Job Card\"], [\"customer\", \"Job Card\"], [\"sales_order\", \"Job Card\"], [\"issued_to\", \"Job Card\"], [\"modified\", \"Job Card\"], [\"docstatus\", \"Job Card\"], [\"eq_manufacturer\", \"Job Card\"], [\"eq_sl_no\", \"Job Card\"]], \"add_totals_row\": 0, \"order_by\": \"`tabJob Card`.`name` asc\", \"add_total_row\": 0, \"filters\": [[\"Job Card\", \"workflow_state\", \"=\", \"Pending Approval\", false]]}", 
   "letter_head": "TL Letter Head", 
-  "modified": "2018-06-27 10:51:33.452443", 
+  "modified": "2018-12-05 16:11:56.723053", 
   "module": "Back Office", 
   "name": "Jobcard list", 
   "query": null, 
@@ -3843,7 +3872,7 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"sample_id\", \"Oil Test Reports\"], [\"sample\", \"Oil Test Reports\"], [\"colour\", \"Oil Test Reports\"], [\"ost_density\", \"Oil Test Reports\"], [\"ost_spr_1\", \"Oil Test Reports\"], [\"ost_spr_2\", \"Oil Test Reports\"], [\"ost_tand_1\", \"Oil Test Reports\"], [\"ost_tand_2\", \"Oil Test Reports\"], [\"ost_bdv\", \"Oil Test Reports\"], [\"ost_ift\", \"Oil Test Reports\"], [\"ost_wc\", \"Oil Test Reports\"], [\"ost_nv\", \"Oil Test Reports\"], [\"ost_ss\", \"Oil Test Reports\"], [\"ost_fp\", \"Oil Test Reports\"], [\"ost_interpretation\", \"Oil Test Reports\"], [\"ost_frequency\", \"Oil Test Reports\"], [\"voltage_class\", \"Oil Test Reports\"], [\"resistivity_limit\", \"Oil Test Reports\"], [\"resistivity_limit_2\", \"Oil Test Reports\"], [\"tand_limit_2\", \"Oil Test Reports\"], [\"ift_limit\", \"Oil Test Reports\"], [\"bdv_limit\", \"Oil Test Reports\"], [\"wc_limit\", \"Oil Test Reports\"], [\"nv_limit\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`modified` desc\", \"filters\": [[\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false]], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"sample_id\", \"Oil Test Reports\"], [\"sample\", \"Oil Test Reports\"], [\"colour\", \"Oil Test Reports\"], [\"ost_density\", \"Oil Test Reports\"], [\"ost_spr_1\", \"Oil Test Reports\"], [\"ost_spr_2\", \"Oil Test Reports\"], [\"ost_tand_1\", \"Oil Test Reports\"], [\"ost_tand_2\", \"Oil Test Reports\"], [\"ost_bdv\", \"Oil Test Reports\"], [\"ost_ift\", \"Oil Test Reports\"], [\"ost_wc\", \"Oil Test Reports\"], [\"ost_nv\", \"Oil Test Reports\"], [\"ost_ss\", \"Oil Test Reports\"], [\"ost_fp\", \"Oil Test Reports\"], [\"ost_interpretation\", \"Oil Test Reports\"], [\"ost_frequency\", \"Oil Test Reports\"], [\"voltage_class\", \"Oil Test Reports\"], [\"resistivity_limit\", \"Oil Test Reports\"], [\"resistivity_limit_2\", \"Oil Test Reports\"], [\"tand_limit_2\", \"Oil Test Reports\"], [\"ift_limit\", \"Oil Test Reports\"], [\"bdv_limit\", \"Oil Test Reports\"], [\"wc_limit\", \"Oil Test Reports\"], [\"nv_limit\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`modified` desc\", \"add_total_row\": 0, \"filters\": [[\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false]]}", 
   "letter_head": "TL Letter Head", 
   "modified": "2018-08-16 11:45:31.229817", 
   "module": "Back Office", 
@@ -3878,7 +3907,7 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Job Card\"], [\"sample\", \"Job Card\"], [\"eq_owner\", \"Job Card\"], [\"equipment\", \"Job Card\"], [\"location\", \"Job Card\"], [\"smp_point\", \"Job Card\"], [\"smp_condition\", \"Job Card\"], [\"collected_by\", \"Job Card\"], [\"trufil_container\", \"Job Card\"], [\"collection_date\", \"Job Card\"], [\"receipt_condition\", \"Job Card\"], [\"receipt_date\", \"Job Card\"], [\"eq_manufacturer\", \"Job Card\"], [\"eq_sl_no\", \"Job Card\"], [\"capacity\", \"Job Card\"], [\"loc_area\", \"Job Card\"], [\"loc_location\", \"Job Card\"], [\"loc_cd\", \"Job Card\"], [\"customer\", \"Job Card\"], [\"sales_order\", \"Job Card\"], [\"sampling_request\", \"Job Card\"], [\"issued_to\", \"Job Card\"], [\"modified\", \"Job Card\"], [\"docstatus\", \"Job Card\"], [\"eq_load\", \"Job Card\"], [\"eq_wtt\", \"Job Card\"], [\"eq_ott\", \"Job Card\"]], \"add_totals_row\": 0, \"order_by\": \"`tabJob Card`.`name` asc\", \"filters\": [[\"Job Card\", \"docstatus\", \"!=\", \"2\", false], [\"Job Card\", \"workflow_state\", \"=\", \"Approved\", false], [\"Job Card\", \"sales_order\", \"=\", \"TL-2018-SO-00052\", false]], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Job Card\"], [\"sample\", \"Job Card\"], [\"eq_owner\", \"Job Card\"], [\"equipment\", \"Job Card\"], [\"location\", \"Job Card\"], [\"smp_point\", \"Job Card\"], [\"smp_condition\", \"Job Card\"], [\"collected_by\", \"Job Card\"], [\"trufil_container\", \"Job Card\"], [\"collection_date\", \"Job Card\"], [\"receipt_condition\", \"Job Card\"], [\"receipt_date\", \"Job Card\"], [\"eq_manufacturer\", \"Job Card\"], [\"eq_sl_no\", \"Job Card\"], [\"capacity\", \"Job Card\"], [\"loc_area\", \"Job Card\"], [\"loc_location\", \"Job Card\"], [\"loc_cd\", \"Job Card\"], [\"customer\", \"Job Card\"], [\"sales_order\", \"Job Card\"], [\"sampling_request\", \"Job Card\"], [\"issued_to\", \"Job Card\"], [\"modified\", \"Job Card\"], [\"docstatus\", \"Job Card\"], [\"eq_load\", \"Job Card\"], [\"eq_wtt\", \"Job Card\"], [\"eq_ott\", \"Job Card\"]], \"add_totals_row\": 0, \"order_by\": \"`tabJob Card`.`name` asc\", \"add_total_row\": 0, \"filters\": [[\"Job Card\", \"docstatus\", \"!=\", \"2\", false], [\"Job Card\", \"workflow_state\", \"=\", \"Approved\", false], [\"Job Card\", \"sales_order\", \"=\", \"TL-2018-SO-00052\", false]]}", 
   "letter_head": "TL Letter Head", 
   "modified": "2018-09-01 11:54:08.003285", 
   "module": "Back Office", 
@@ -3907,9 +3936,9 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"report_date\", \"Oil Test Reports\"], [\"sample_id\", \"Oil Test Reports\"], [\"sample\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"testing_date\", \"Oil Test Reports\"], [\"lab_temp\", \"Oil Test Reports\"], [\"lab_humidity\", \"Oil Test Reports\"], [\"sales_order\", \"Oil Test Reports\"], [\"equipment\", \"Oil Test Reports\"], [\"customer\", \"Oil Test Reports\"], [\"collection_date\", \"Oil Test Reports\"], [\"issued_to\", \"Oil Test Reports\"], [\"modified\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"trufil_container\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` asc\", \"filters\": [[\"Oil Test Reports\", \"docstatus\", \"!=\", \"2\", false], [\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false]], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"report_date\", \"Oil Test Reports\"], [\"sample_id\", \"Oil Test Reports\"], [\"sample\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"testing_date\", \"Oil Test Reports\"], [\"lab_temp\", \"Oil Test Reports\"], [\"lab_humidity\", \"Oil Test Reports\"], [\"sales_order\", \"Oil Test Reports\"], [\"equipment\", \"Oil Test Reports\"], [\"customer\", \"Oil Test Reports\"], [\"collection_date\", \"Oil Test Reports\"], [\"issued_to\", \"Oil Test Reports\"], [\"modified\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"trufil_container\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` asc\", \"add_total_row\": 0, \"filters\": [[\"Oil Test Reports\", \"docstatus\", \"!=\", \"2\", false], [\"Oil Test Reports\", \"workflow_state\", \"=\", \"Approved\", false], [\"Oil Test Reports\", \"report_date\", \">\", \"2017-12-31\", false]]}", 
   "letter_head": "TL Letter Head", 
-  "modified": "2018-09-11 09:50:56.997687", 
+  "modified": "2019-03-19 16:27:06.050729", 
   "module": "Back Office", 
   "name": "Scope", 
   "query": null, 
@@ -3942,7 +3971,7 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"report_no\", \"Oil Test Reports\"], [\"report_date\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"ost_density\", \"Oil Test Reports\"], [\"ost_spr_1\", \"Oil Test Reports\"], [\"ost_spr_2\", \"Oil Test Reports\"], [\"ost_tand_1\", \"Oil Test Reports\"], [\"ost_tand_2\", \"Oil Test Reports\"], [\"ost_bdv\", \"Oil Test Reports\"], [\"ost_ift\", \"Oil Test Reports\"], [\"ost_wc\", \"Oil Test Reports\"], [\"ost_nv\", \"Oil Test Reports\"], [\"ost_fp\", \"Oil Test Reports\"], [\"ost_interpretation\", \"Oil Test Reports\"], [\"dga_tgc\", \"Oil Test Reports\"], [\"dga_tdcg\", \"Oil Test Reports\"], [\"dga_tdcg_tcg\", \"Oil Test Reports\"], [\"dga_h2\", \"Oil Test Reports\"], [\"dga_co\", \"Oil Test Reports\"], [\"dga_ch4\", \"Oil Test Reports\"], [\"dga_co2\", \"Oil Test Reports\"], [\"dga_c2h6\", \"Oil Test Reports\"], [\"dga_c2h4\", \"Oil Test Reports\"], [\"dga_c2h2\", \"Oil Test Reports\"], [\"dga_interpretation\", \"Oil Test Reports\"], [\"furan_5h2f\", \"Oil Test Reports\"], [\"furan_2fa\", \"Oil Test Reports\"], [\"furan_2f\", \"Oil Test Reports\"], [\"furan_2a\", \"Oil Test Reports\"], [\"furan_5m2f\", \"Oil Test Reports\"], [\"furan_tfc\", \"Oil Test Reports\"], [\"furan_interpretation\", \"Oil Test Reports\"], [\"equipment\", \"Oil Test Reports\"], [\"eq_manufacturer\", \"Oil Test Reports\"], [\"eq_sl_no\", \"Oil Test Reports\"], [\"name\", \"Oil Test Reports\"], [\"location\", \"Oil Test Reports\"], [\"loc_area\", \"Oil Test Reports\"], [\"loc_location\", \"Oil Test Reports\"], [\"loc_cd\", \"Oil Test Reports\"], [\"owner_eq_id\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"loc_ccd\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`modified` desc\", \"filters\": [[\"Oil Test Reports\", \"eq_owner\", \"like\", \"%jsw%\", false], [\"Oil Test Reports\", \"equipment\", \"like\", \"%EQ-00631%\", false]], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"report_no\", \"Oil Test Reports\"], [\"report_date\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"ost_density\", \"Oil Test Reports\"], [\"ost_spr_1\", \"Oil Test Reports\"], [\"ost_spr_2\", \"Oil Test Reports\"], [\"ost_tand_1\", \"Oil Test Reports\"], [\"ost_tand_2\", \"Oil Test Reports\"], [\"ost_bdv\", \"Oil Test Reports\"], [\"ost_ift\", \"Oil Test Reports\"], [\"ost_wc\", \"Oil Test Reports\"], [\"ost_nv\", \"Oil Test Reports\"], [\"ost_fp\", \"Oil Test Reports\"], [\"ost_interpretation\", \"Oil Test Reports\"], [\"dga_tgc\", \"Oil Test Reports\"], [\"dga_tdcg\", \"Oil Test Reports\"], [\"dga_tdcg_tcg\", \"Oil Test Reports\"], [\"dga_h2\", \"Oil Test Reports\"], [\"dga_co\", \"Oil Test Reports\"], [\"dga_ch4\", \"Oil Test Reports\"], [\"dga_co2\", \"Oil Test Reports\"], [\"dga_c2h6\", \"Oil Test Reports\"], [\"dga_c2h4\", \"Oil Test Reports\"], [\"dga_c2h2\", \"Oil Test Reports\"], [\"dga_interpretation\", \"Oil Test Reports\"], [\"furan_5h2f\", \"Oil Test Reports\"], [\"furan_2fa\", \"Oil Test Reports\"], [\"furan_2f\", \"Oil Test Reports\"], [\"furan_2a\", \"Oil Test Reports\"], [\"furan_5m2f\", \"Oil Test Reports\"], [\"furan_tfc\", \"Oil Test Reports\"], [\"furan_interpretation\", \"Oil Test Reports\"], [\"equipment\", \"Oil Test Reports\"], [\"eq_manufacturer\", \"Oil Test Reports\"], [\"eq_sl_no\", \"Oil Test Reports\"], [\"name\", \"Oil Test Reports\"], [\"location\", \"Oil Test Reports\"], [\"loc_area\", \"Oil Test Reports\"], [\"loc_location\", \"Oil Test Reports\"], [\"loc_cd\", \"Oil Test Reports\"], [\"owner_eq_id\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"loc_ccd\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`modified` desc\", \"add_total_row\": 0, \"filters\": [[\"Oil Test Reports\", \"eq_owner\", \"like\", \"%jsw%\", false], [\"Oil Test Reports\", \"equipment\", \"like\", \"%EQ-00631%\", false]]}", 
   "letter_head": "TL Letter Head", 
   "modified": "2018-08-08 10:56:12.769648", 
   "module": "Back Office", 
@@ -3977,7 +4006,7 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"ost_density\", \"Oil Test Reports\"], [\"ost_spr_1\", \"Oil Test Reports\"], [\"ost_spr_2\", \"Oil Test Reports\"], [\"ost_tand_1\", \"Oil Test Reports\"], [\"ost_tand_2\", \"Oil Test Reports\"], [\"ost_bdv\", \"Oil Test Reports\"], [\"ost_ift\", \"Oil Test Reports\"], [\"ost_wc\", \"Oil Test Reports\"], [\"ost_nv\", \"Oil Test Reports\"], [\"ost_ss\", \"Oil Test Reports\"], [\"ost_fp\", \"Oil Test Reports\"], [\"ost_interpretation\", \"Oil Test Reports\"], [\"dga_tgc\", \"Oil Test Reports\"], [\"dga_tdcg\", \"Oil Test Reports\"], [\"dga_tdcg_tcg\", \"Oil Test Reports\"], [\"dga_h2\", \"Oil Test Reports\"], [\"dga_o2\", \"Oil Test Reports\"], [\"dga_n2\", \"Oil Test Reports\"], [\"dga_co\", \"Oil Test Reports\"], [\"dga_ch4\", \"Oil Test Reports\"], [\"dga_co2\", \"Oil Test Reports\"], [\"dga_c2h6\", \"Oil Test Reports\"], [\"dga_c2h4\", \"Oil Test Reports\"], [\"dga_c2h2\", \"Oil Test Reports\"], [\"dga_c3h8\", \"Oil Test Reports\"], [\"dga_c3h6\", \"Oil Test Reports\"], [\"dga_interpretation\", \"Oil Test Reports\"], [\"furan_5h2f\", \"Oil Test Reports\"], [\"furan_2fa\", \"Oil Test Reports\"], [\"furan_2f\", \"Oil Test Reports\"], [\"furan_2a\", \"Oil Test Reports\"], [\"furan_5m2f\", \"Oil Test Reports\"], [\"furan_tfc\", \"Oil Test Reports\"], [\"eq_sl_no\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"recommendation\", \"Oil Test Reports\"], [\"furan_interpretation\", \"Oil Test Reports\"], [\"eq_manufacturer\", \"Oil Test Reports\"], [\"loc_area\", \"Oil Test Reports\"], [\"loc_location\", \"Oil Test Reports\"], [\"loc_cd\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`modified` desc\", \"filters\": [[\"Oil Test Reports\", \"docstatus\", \"!=\", \"2\", false], [\"Oil Test Reports\", \"sales_order\", \"like\", \"%00034%\", false], [\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false]], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"ost_density\", \"Oil Test Reports\"], [\"ost_spr_1\", \"Oil Test Reports\"], [\"ost_spr_2\", \"Oil Test Reports\"], [\"ost_tand_1\", \"Oil Test Reports\"], [\"ost_tand_2\", \"Oil Test Reports\"], [\"ost_bdv\", \"Oil Test Reports\"], [\"ost_ift\", \"Oil Test Reports\"], [\"ost_wc\", \"Oil Test Reports\"], [\"ost_nv\", \"Oil Test Reports\"], [\"ost_ss\", \"Oil Test Reports\"], [\"ost_fp\", \"Oil Test Reports\"], [\"ost_interpretation\", \"Oil Test Reports\"], [\"dga_tgc\", \"Oil Test Reports\"], [\"dga_tdcg\", \"Oil Test Reports\"], [\"dga_tdcg_tcg\", \"Oil Test Reports\"], [\"dga_h2\", \"Oil Test Reports\"], [\"dga_o2\", \"Oil Test Reports\"], [\"dga_n2\", \"Oil Test Reports\"], [\"dga_co\", \"Oil Test Reports\"], [\"dga_ch4\", \"Oil Test Reports\"], [\"dga_co2\", \"Oil Test Reports\"], [\"dga_c2h6\", \"Oil Test Reports\"], [\"dga_c2h4\", \"Oil Test Reports\"], [\"dga_c2h2\", \"Oil Test Reports\"], [\"dga_c3h8\", \"Oil Test Reports\"], [\"dga_c3h6\", \"Oil Test Reports\"], [\"dga_interpretation\", \"Oil Test Reports\"], [\"furan_5h2f\", \"Oil Test Reports\"], [\"furan_2fa\", \"Oil Test Reports\"], [\"furan_2f\", \"Oil Test Reports\"], [\"furan_2a\", \"Oil Test Reports\"], [\"furan_5m2f\", \"Oil Test Reports\"], [\"furan_tfc\", \"Oil Test Reports\"], [\"eq_sl_no\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"recommendation\", \"Oil Test Reports\"], [\"furan_interpretation\", \"Oil Test Reports\"], [\"eq_manufacturer\", \"Oil Test Reports\"], [\"loc_area\", \"Oil Test Reports\"], [\"loc_location\", \"Oil Test Reports\"], [\"loc_cd\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`modified` desc\", \"add_total_row\": 0, \"filters\": [[\"Oil Test Reports\", \"docstatus\", \"!=\", \"2\", false], [\"Oil Test Reports\", \"sales_order\", \"like\", \"%00034%\", false], [\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false]]}", 
   "letter_head": "TL Letter Head", 
   "modified": "2018-07-17 17:23:37.822497", 
   "module": "Back Office", 
@@ -4012,7 +4041,7 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"ost_density\", \"Oil Test Reports\"], [\"ost_spr_1\", \"Oil Test Reports\"], [\"ost_spr_2\", \"Oil Test Reports\"], [\"ost_tand_1\", \"Oil Test Reports\"], [\"ost_tand_2\", \"Oil Test Reports\"], [\"ost_bdv\", \"Oil Test Reports\"], [\"ost_ift\", \"Oil Test Reports\"], [\"ost_wc\", \"Oil Test Reports\"], [\"ost_nv\", \"Oil Test Reports\"], [\"ost_fp\", \"Oil Test Reports\"], [\"ost_interpretation\", \"Oil Test Reports\"], [\"dga_tgc\", \"Oil Test Reports\"], [\"dga_tdcg\", \"Oil Test Reports\"], [\"dga_tdcg_tcg\", \"Oil Test Reports\"], [\"dga_h2\", \"Oil Test Reports\"], [\"dga_co\", \"Oil Test Reports\"], [\"dga_ch4\", \"Oil Test Reports\"], [\"dga_co2\", \"Oil Test Reports\"], [\"dga_c2h6\", \"Oil Test Reports\"], [\"dga_c2h4\", \"Oil Test Reports\"], [\"dga_c2h2\", \"Oil Test Reports\"], [\"dga_interpretation\", \"Oil Test Reports\"], [\"recommendation\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"sales_order\", \"Oil Test Reports\"], [\"customer\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` desc\", \"filters\": [[\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false]], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"ost_density\", \"Oil Test Reports\"], [\"ost_spr_1\", \"Oil Test Reports\"], [\"ost_spr_2\", \"Oil Test Reports\"], [\"ost_tand_1\", \"Oil Test Reports\"], [\"ost_tand_2\", \"Oil Test Reports\"], [\"ost_bdv\", \"Oil Test Reports\"], [\"ost_ift\", \"Oil Test Reports\"], [\"ost_wc\", \"Oil Test Reports\"], [\"ost_nv\", \"Oil Test Reports\"], [\"ost_fp\", \"Oil Test Reports\"], [\"ost_interpretation\", \"Oil Test Reports\"], [\"dga_tgc\", \"Oil Test Reports\"], [\"dga_tdcg\", \"Oil Test Reports\"], [\"dga_tdcg_tcg\", \"Oil Test Reports\"], [\"dga_h2\", \"Oil Test Reports\"], [\"dga_co\", \"Oil Test Reports\"], [\"dga_ch4\", \"Oil Test Reports\"], [\"dga_co2\", \"Oil Test Reports\"], [\"dga_c2h6\", \"Oil Test Reports\"], [\"dga_c2h4\", \"Oil Test Reports\"], [\"dga_c2h2\", \"Oil Test Reports\"], [\"dga_interpretation\", \"Oil Test Reports\"], [\"recommendation\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"sales_order\", \"Oil Test Reports\"], [\"customer\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` desc\", \"add_total_row\": 0, \"filters\": [[\"Oil Test Reports\", \"workflow_state\", \"=\", \"Pending Approval\", false]]}", 
   "letter_head": "TL Letter Head", 
   "modified": "2018-08-05 12:06:35.264788", 
   "module": "Back Office", 
@@ -4047,7 +4076,7 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"report_date\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"eq_owner\", \"Oil Test Reports\"], [\"equipment\", \"Oil Test Reports\"], [\"customer\", \"Oil Test Reports\"], [\"issued_to\", \"Oil Test Reports\"], [\"loc_area\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`modified` desc\", \"filters\": [[\"Oil Test Reports\", \"workflow_state\", \"=\", \"Approved\", false], [\"Oil Test Reports\", \"report_date\", \"Between\", null, false]], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"report_date\", \"Oil Test Reports\"], [\"is_ost\", \"Oil Test Reports\"], [\"is_dga\", \"Oil Test Reports\"], [\"is_furan\", \"Oil Test Reports\"], [\"eq_owner\", \"Oil Test Reports\"], [\"equipment\", \"Oil Test Reports\"], [\"customer\", \"Oil Test Reports\"], [\"issued_to\", \"Oil Test Reports\"], [\"loc_area\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`modified` desc\", \"add_total_row\": 0, \"filters\": [[\"Oil Test Reports\", \"workflow_state\", \"=\", \"Approved\", false], [\"Oil Test Reports\", \"report_date\", \"Between\", null, false]]}", 
   "letter_head": "TL Letter Head", 
   "modified": "2018-08-06 15:50:31.457581", 
   "module": "Back Office", 
@@ -4082,7 +4111,7 @@
   "doctype": "Report", 
   "is_standard": "No", 
   "javascript": null, 
-  "json": "{\"fields\": [[\"name\", \"Sales Invoice\"], [\"customer\", \"Sales Invoice\"], [\"customer_name\", \"Sales Invoice\"], [\"summary\", \"Sales Invoice\"], [\"company\", \"Sales Invoice\"], [\"posting_date\", \"Sales Invoice\"], [\"due_date\", \"Sales Invoice\"], [\"is_return\", \"Sales Invoice\"], [\"currency\", \"Sales Invoice\"], [\"base_grand_total\", \"Sales Invoice\"], [\"grand_total\", \"Sales Invoice\"], [\"outstanding_amount\", \"Sales Invoice\"], [\"status\", \"Sales Invoice\"], [\"docstatus\", \"Sales Invoice\"], [\"po_no\", \"Sales Invoice\"], [\"sales_order\", \"Sales Invoice\"], [\"party_account_currency\", \"Sales Invoice\"]], \"add_totals_row\": 0, \"order_by\": \"`tabSales Invoice`.`name` asc\", \"filters\": [[\"Sales Invoice\", \"docstatus\", \"=\", \"1\", false]], \"add_total_row\": 0}", 
+  "json": "{\"fields\": [[\"name\", \"Sales Invoice\"], [\"customer\", \"Sales Invoice\"], [\"customer_name\", \"Sales Invoice\"], [\"summary\", \"Sales Invoice\"], [\"company\", \"Sales Invoice\"], [\"posting_date\", \"Sales Invoice\"], [\"due_date\", \"Sales Invoice\"], [\"is_return\", \"Sales Invoice\"], [\"currency\", \"Sales Invoice\"], [\"base_grand_total\", \"Sales Invoice\"], [\"grand_total\", \"Sales Invoice\"], [\"outstanding_amount\", \"Sales Invoice\"], [\"status\", \"Sales Invoice\"], [\"docstatus\", \"Sales Invoice\"], [\"po_no\", \"Sales Invoice\"], [\"sales_order\", \"Sales Invoice\"], [\"party_account_currency\", \"Sales Invoice\"]], \"add_totals_row\": 0, \"order_by\": \"`tabSales Invoice`.`name` asc\", \"add_total_row\": 0, \"filters\": [[\"Sales Invoice\", \"docstatus\", \"=\", \"1\", false]]}", 
   "letter_head": "TL Letter Head", 
   "modified": "2018-08-14 10:40:28.349479", 
   "module": "Accounts", 
@@ -4097,6 +4126,178 @@
    }, 
    {
     "role": "Accounts User"
+   }
+  ]
+ }, 
+ {
+  "add_total_row": 0, 
+  "apply_user_permissions": 1, 
+  "disabled": 0, 
+  "docstatus": 0, 
+  "doctype": "Report", 
+  "is_standard": "No", 
+  "javascript": null, 
+  "json": "{\"fields\": [[\"name\", \"Job Card\"], [\"sample\", \"Job Card\"], [\"trufil_container\", \"Job Card\"], [\"collection_date\", \"Job Card\"], [\"equipment\", \"Job Card\"], [\"owner_eq_id\", \"Job Card\"], [\"capacity\", \"Job Card\"], [\"eq_manufacturer\", \"Job Card\"], [\"eq_sl_no\", \"Job Card\"], [\"modified\", \"Job Card\"], [\"eq_yom\", \"Job Card\"], [\"location\", \"Job Card\"], [\"loc_ccd\", \"Job Card\"], [\"loc_area\", \"Job Card\"], [\"loc_location\", \"Job Card\"], [\"docstatus\", \"Job Card\"], [\"loc_cd\", \"Job Card\"]], \"add_totals_row\": 0, \"order_by\": \"`tabJob Card`.`name` asc\", \"add_total_row\": 0, \"filters\": [[\"Job Card\", \"sales_order\", \"=\", \"TL-2018-SO-00129\", false], [\"Job Card\", \"docstatus\", \"!=\", \"2\", false], [\"Job Card\", \"workflow_state\", \"=\", \"Approved\", false]]}", 
+  "letter_head": "TL Letter Head", 
+  "modified": "2019-01-24 16:45:26.073956", 
+  "module": "Back Office", 
+  "name": "AdaniElectricity-DT", 
+  "query": null, 
+  "ref_doctype": "Job Card", 
+  "report_name": "AdaniElectricity-DT", 
+  "report_type": "Report Builder", 
+  "roles": [
+   {
+    "role": "System Manager"
+   }, 
+   {
+    "role": "Lab Coordinator"
+   }, 
+   {
+    "role": "Lab Manager"
+   }
+  ]
+ }, 
+ {
+  "add_total_row": 0, 
+  "apply_user_permissions": 1, 
+  "disabled": 0, 
+  "docstatus": 0, 
+  "doctype": "Report", 
+  "is_standard": "No", 
+  "javascript": null, 
+  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"sample_id\", \"Oil Test Reports\"], [\"testing_date\", \"Oil Test Reports\"], [\"lab_temp\", \"Oil Test Reports\"], [\"lab_humidity\", \"Oil Test Reports\"], [\"colour\", \"Oil Test Reports\"], [\"clarity\", \"Oil Test Reports\"], [\"odour\", \"Oil Test Reports\"], [\"ost_density\", \"Oil Test Reports\"], [\"ost_bdv\", \"Oil Test Reports\"], [\"ost_ift\", \"Oil Test Reports\"], [\"ost_wc\", \"Oil Test Reports\"], [\"ost_nv\", \"Oil Test Reports\"], [\"ost_interpretation\", \"Oil Test Reports\"], [\"ost_frequency\", \"Oil Test Reports\"], [\"recommendation\", \"Oil Test Reports\"], [\"approved_on\", \"Oil Test Reports\"], [\"modified\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"], [\"creation\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`report_no` asc\", \"add_total_row\": 0, \"filters\": [[\"Oil Test Reports\", \"docstatus\", \"!=\", \"2\", false], [\"Oil Test Reports\", \"workflow_state\", \"=\", \"Approved\", false], [\"Oil Test Reports\", \"sales_order\", \"like\", \"%TL-2018-SO-00129%\", false]]}", 
+  "letter_head": "TL Letter Head", 
+  "modified": "2019-01-24 14:55:35.847595", 
+  "module": "Back Office", 
+  "name": "AdaniElectricity-DT-OTR", 
+  "query": null, 
+  "ref_doctype": "Oil Test Reports", 
+  "report_name": "AdaniElectricity-DT-OTR", 
+  "report_type": "Report Builder", 
+  "roles": [
+   {
+    "role": "Lab Coordinator"
+   }, 
+   {
+    "role": "System Manager"
+   }, 
+   {
+    "role": "Lab Technician"
+   }, 
+   {
+    "role": "Lab In-Charge"
+   }, 
+   {
+    "role": "Lab Manager"
+   }
+  ]
+ }, 
+ {
+  "add_total_row": 0, 
+  "apply_user_permissions": 1, 
+  "disabled": 0, 
+  "docstatus": 0, 
+  "doctype": "Report", 
+  "is_standard": "No", 
+  "javascript": null, 
+  "json": "{\"fields\": [[\"name\", \"Locations\"], [\"loc_owner\", \"Locations\"], [\"area\", \"Locations\"], [\"location\", \"Locations\"], [\"cd\", \"Locations\"], [\"ccd\", \"Locations\"], [\"installation\", \"Locations\"], [\"docstatus\", \"Locations\"], [\"modified\", \"Locations\"]], \"add_totals_row\": 0, \"order_by\": \"`tabLocations`.`name` asc\", \"add_total_row\": 0, \"filters\": [[\"Locations\", \"loc_owner\", \"=\", \"BSES-Rajdhani-New Delhi\", false]]}", 
+  "letter_head": "TL Letter Head", 
+  "modified": "2018-12-14 17:18:10.994408", 
+  "module": "Back Office", 
+  "name": "Location List", 
+  "query": null, 
+  "ref_doctype": "Locations", 
+  "report_name": "Location List", 
+  "report_type": "Report Builder", 
+  "roles": [
+   {
+    "role": "Lab Coordinator"
+   }, 
+   {
+    "role": "Lab Manager"
+   }, 
+   {
+    "role": "TL Master Manager"
+   }, 
+   {
+    "role": "Lab In-Charge"
+   }, 
+   {
+    "role": "System Manager"
+   }, 
+   {
+    "role": "Sampler"
+   }, 
+   {
+    "role": "Lab Technician"
+   }
+  ]
+ }, 
+ {
+  "add_total_row": 0, 
+  "apply_user_permissions": 1, 
+  "disabled": 0, 
+  "docstatus": 0, 
+  "doctype": "Report", 
+  "is_standard": "No", 
+  "javascript": null, 
+  "json": "{\"fields\": [[\"name\", \"Quotation\"], [\"customer\", \"Quotation\"], [\"company\", \"Quotation\"], [\"transaction_date\", \"Quotation\"], [\"valid_till\", \"Quotation\"], [\"currency\", \"Quotation\"], [\"total\", \"Quotation\"], [\"status\", \"Quotation\"], [\"owner\", \"Quotation\"], [\"docstatus\", \"Quotation\"]], \"add_totals_row\": 0, \"order_by\": \"`tabQuotation`.`modified` desc\", \"add_total_row\": 0, \"filters\": []}", 
+  "letter_head": "TL Letter Head", 
+  "modified": "2019-02-01 16:56:05.964515", 
+  "module": "Selling", 
+  "name": "quotation status", 
+  "query": null, 
+  "ref_doctype": "Quotation", 
+  "report_name": "quotation status", 
+  "report_type": "Report Builder", 
+  "roles": [
+   {
+    "role": "Sales User"
+   }, 
+   {
+    "role": "Sales Manager"
+   }, 
+   {
+    "role": "Maintenance Manager"
+   }, 
+   {
+    "role": "Maintenance User"
+   }
+  ]
+ }, 
+ {
+  "add_total_row": 0, 
+  "apply_user_permissions": 1, 
+  "disabled": 0, 
+  "docstatus": 0, 
+  "doctype": "Report", 
+  "is_standard": "No", 
+  "javascript": null, 
+  "json": "{\"fields\": [[\"name\", \"Oil Test Reports\"], [\"report_no\", \"Oil Test Reports\"], [\"report_date\", \"Oil Test Reports\"], [\"ost_density\", \"Oil Test Reports\"], [\"ost_spr_1\", \"Oil Test Reports\"], [\"ost_spr_2\", \"Oil Test Reports\"], [\"ost_tand_1\", \"Oil Test Reports\"], [\"ost_tand_2\", \"Oil Test Reports\"], [\"ost_bdv\", \"Oil Test Reports\"], [\"ost_ift\", \"Oil Test Reports\"], [\"ost_wc\", \"Oil Test Reports\"], [\"ost_nv\", \"Oil Test Reports\"], [\"ost_fp\", \"Oil Test Reports\"], [\"dga_tgc\", \"Oil Test Reports\"], [\"dga_tdcg\", \"Oil Test Reports\"], [\"dga_tdcg_tcg\", \"Oil Test Reports\"], [\"dga_h2\", \"Oil Test Reports\"], [\"dga_co\", \"Oil Test Reports\"], [\"dga_ch4\", \"Oil Test Reports\"], [\"dga_co2\", \"Oil Test Reports\"], [\"dga_c2h6\", \"Oil Test Reports\"], [\"dga_c2h4\", \"Oil Test Reports\"], [\"dga_c2h2\", \"Oil Test Reports\"], [\"furan_5h2f\", \"Oil Test Reports\"], [\"furan_2fa\", \"Oil Test Reports\"], [\"furan_2f\", \"Oil Test Reports\"], [\"furan_2a\", \"Oil Test Reports\"], [\"furan_5m2f\", \"Oil Test Reports\"], [\"furan_tfc\", \"Oil Test Reports\"], [\"owner_eq_id\", \"Oil Test Reports\"], [\"loc_cd\", \"Oil Test Reports\"], [\"lab_humidity\", \"Oil Test Reports\"], [\"testing_date\", \"Oil Test Reports\"], [\"colour\", \"Oil Test Reports\"], [\"lab_temp\", \"Oil Test Reports\"], [\"sample\", \"Oil Test Reports\"], [\"smp_point\", \"Oil Test Reports\"], [\"docstatus\", \"Oil Test Reports\"]], \"add_totals_row\": 0, \"order_by\": \"`tabOil Test Reports`.`modified` desc\", \"add_total_row\": 0, \"filters\": []}", 
+  "letter_head": "TL Letter Head", 
+  "modified": "2019-03-23 13:17:02.104169", 
+  "module": "Back Office", 
+  "name": "reliance report", 
+  "query": null, 
+  "ref_doctype": "Oil Test Reports", 
+  "report_name": "reliance report", 
+  "report_type": "Report Builder", 
+  "roles": [
+   {
+    "role": "Lab Coordinator"
+   }, 
+   {
+    "role": "System Manager"
+   }, 
+   {
+    "role": "Lab Technician"
+   }, 
+   {
+    "role": "Lab In-Charge"
+   }, 
+   {
+    "role": "Lab Manager"
    }
   ]
  }
