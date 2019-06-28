@@ -80,23 +80,13 @@ develop_version = '1.x.x-beta'
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
+# doc_events = {
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
 #	}
-	# "Sales Invoice": {
-		# "autoname": "tfaddon.trufil_addon.sales_invoice.si_autoname"
-	# },
-	# "Sales Order": {
-		# "autoname": "tfaddon.trufil_addon.sales_order.si_autoname"
-	# },
-	# "Quotation": {
-		# "autoname": "tfaddon.trufil_addon.sales_quotation.si_autoname"
-	# },
-
-}
+# }
 
 # Scheduled Tasks
 # ---------------
